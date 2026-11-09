@@ -1,14 +1,14 @@
 ---
 publish: true
 created: 2026-11-09T10:57:04.977Z
-modified: 2026-11-09T12:53:58.896Z
-published: 2026-11-09T12:53:58.896Z
+modified: 2026-11-09T14:53:58.982Z
+published: 2026-11-09T14:53:58.982Z
 tags:
   - dnd-character
   - therianthrope-(werebeast)-5.5e
   - pugilist
-name: Meeka
-surname:
+name: Mikleine
+surname: Brandis
 birth_year_GG: 566
 background: Soldier
 current_location: "[[New Calaban]]"
