@@ -1,9 +1,9 @@
+filters:
+  and:
+    - srd_origin == "homebrew"
 views:
   - type: table
     name: View
-    filters:
-      and:
-        - srd_origin == "homebrew"
     groupBy:
       property: brew_type
       direction: ASC

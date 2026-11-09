@@ -2,7 +2,7 @@ filters:
   and:
     - '!file.path.containsAny("Codex", "DM")'
     - file.path.contains("_Heroes/Best Friends")
-    - '!file.name.containsAny("Heroes", "Best")'
+    - '!file.name.containsAny("Best")'
 formulas:
   Age: |+
     586-number(birth_year_GG)
