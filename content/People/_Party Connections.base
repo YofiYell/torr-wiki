@@ -1,6 +1,6 @@
 filters:
   and:
-    - file.path.startsWith("Wiki/People/")
+    - file.path.contains("/People/")
     - met_party == true
 views:
   - type: table

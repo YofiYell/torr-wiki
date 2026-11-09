@@ -3,7 +3,7 @@ views:
     name: View
     filters:
       and:
-        - file.folder == "Wiki/Campaign/Quests"
+        - file.path.contains("/Campaign/Quests")
         - file.name != "Quests.base"
     groupBy:
       property: status

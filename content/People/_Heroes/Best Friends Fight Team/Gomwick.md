@@ -2,10 +2,40 @@
 publish: true
 created: 2026-11-09T10:51:24.379Z
 modified: 2026-11-09T12:53:58.877Z
+published: 2026-11-09T12:53:58.877Z
 tags:
   - dnd-character
   - orc
   - wizard
+name: Gomwick
+surname: Galanodel
+birth_year_GG: 564
+background: Artisan
+current_location: "[[New Calaban]]"
+species: Orc
+subspecies: ""
+level: 3
+class: Wizard 3
+subclass: Illusionist
+related_locations:
+dndbeyond_id: 163598337
+party: "[[Best Friends Fight Team]]"
+related_persons:
+affiliations:
+origin_location: "[[Elivandra - Island]]"
+home_location: "[[Elivandra - Island]]"
+alignment: ""
+hp: 23
+modifier: 2
+ac: 12
+speed: 30
+proficiency_bonus: 2
+str: 8
+dex: 15
+con: 16
+int: 18
+wis: 10
+cha: 13
 ---
 
 > [!char]- Character Sheet

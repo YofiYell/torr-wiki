@@ -2,6 +2,14 @@
 publish: true
 created: 2026-11-08T21:20:12.000Z
 modified: 2026-11-09T12:53:58.956Z
+published: 2026-11-09T12:53:58.956Z
+name: Garthri
+surname: Ironhand
+species: Dwarf
+met_party: false
+familiarity: Mixed
+disposition:
+related_locations: "[[Garth's]]"
 ---
 
 Owner of [[Garth's]] Arena.

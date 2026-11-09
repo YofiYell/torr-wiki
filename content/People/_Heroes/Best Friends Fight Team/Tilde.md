@@ -2,10 +2,40 @@
 publish: true
 created: 2026-11-09T11:09:04.274Z
 modified: 2026-11-09T12:53:58.889Z
+published: 2026-11-09T12:53:58.889Z
 tags:
   - dnd-character
   - owlin
   - monk
+name: Tilde
+surname:
+birth_year_GG: 567
+background: Acolyte
+current_location: "[[New Calaban]]"
+species: Owlin
+subspecies: ""
+level: 3
+class: Monk 3
+subclass: Warrior of Mercy 5.5e
+related_locations:
+dndbeyond_id: 164789231
+party: "[[Best Friends Fight Team]]"
+related_persons:
+affiliations:
+origin_location:
+home_location:
+alignment: Chaotic Good
+hp: 24
+modifier: 3
+ac: 13
+speed: 30
+proficiency_bonus: 2
+str: 8
+dex: 16
+con: 15
+int: 12
+wis: 14
+cha: 12
 ---
 
 > [!char]- Character Sheet

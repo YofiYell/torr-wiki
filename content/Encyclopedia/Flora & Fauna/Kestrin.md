@@ -2,6 +2,10 @@
 publish: true
 created: 2026-10-30T02:56:54.000Z
 modified: 2026-11-09T12:53:58.840Z
+published: 2026-11-09T12:53:58.840Z
+srd_origin: homebrew
+brew_type: creature
+creature_type: beast
 ---
 
 Wild Kestrin are large, flightless birds native to [[Orun|Orun’s]] interior river valleys, serving as the primary mount, draft animal, and cavalry beast across the Eastern region. With their powerful legs and broad, webbed feet adapted for mud, gravel, and shallow water, kestrin excel where horses would fail—moving swiftly across broken terrain, leaping large distances, and carrying heavy loads over long periods. To the people of [[Eldia - Nation|Eldia]], a kestrin is not simply an animal—it is the foundation of travel, labor, and war.

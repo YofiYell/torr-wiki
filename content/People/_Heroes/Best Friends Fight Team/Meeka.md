@@ -2,10 +2,45 @@
 publish: true
 created: 2026-11-09T10:57:04.977Z
 modified: 2026-11-09T12:53:58.896Z
+published: 2026-11-09T12:53:58.896Z
 tags:
   - dnd-character
   - therianthrope-(werebeast)-5.5e
   - pugilist
+name: Meeka
+surname:
+birth_year_GG: 566
+background: Soldier
+current_location: "[[New Calaban]]"
+species: Therianthrope (Werebeast) 5.5e
+subspecies: Nycterianthrope
+level: 3
+class: Pugilist 3
+subclass: Sweet Science
+related_locations:
+  - "[[Rowena's Cottage]]"
+  - "[[Garth's]]"
+dndbeyond_id: 163719977
+party: "[[Best Friends Fight Team]]"
+related_persons:
+  - "[[Rowena Rumblefoot]]"
+  - "[[Garthri Ironhand]]"
+  - "[[Wala]]"
+affiliations:
+origin_location:
+home_location:
+alignment: Chaotic Good
+hp: 28
+modifier: 1
+ac: 11
+speed: 30
+proficiency_bonus: 2
+str: 15
+dex: 12
+con: 14
+int: 8
+wis: 13
+cha: 10
 ---
 
 > [!char]- Character Sheet

@@ -2,6 +2,14 @@
 publish: true
 created: 2026-11-08T04:25:58.000Z
 modified: 2026-11-09T12:53:58.951Z
+published: 2026-11-09T12:53:58.951Z
+occupation: MOC
+familiarity: Acquainted
+met_party: true
+related_locations: "[[Central Commission (CIFSA)]]"
+last_contact: "[[Session 5]]"
+disposition: Annoyed
+species: Half-Orc
 ---
 
 The party met Balthus bringing a Manticore into [[Commission for Irregular Sanction Field Action (CIFSA)|CIFSA]]’s [[Central Commission (CIFSA)|Central Commission]].

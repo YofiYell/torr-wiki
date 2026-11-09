@@ -2,6 +2,7 @@
 publish: true
 created: 2026-11-08T20:30:14.000Z
 modified: 2026-11-09T12:53:58.883Z
+published: 2026-11-09T12:53:58.883Z
 ---
 
 ![[_Heroes.base]]
