@@ -3,8 +3,9 @@ views:
     name: View
     filters:
       and:
-        - file.path.contains("/Campaign/Quests")
+        - file.path.contains("Campaign/Quests")
         - file.name != "Quests.base"
+        - '!file.path.contains("Codex")'
     groupBy:
       property: status
       direction: ASC

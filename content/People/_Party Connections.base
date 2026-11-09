@@ -1,6 +1,7 @@
 filters:
   and:
-    - file.path.contains("/People/")
+    - '!file.path.containsAny("Codex", "DM")'
+    - file.path.contains("People/")
     - met_party == true
 views:
   - type: table

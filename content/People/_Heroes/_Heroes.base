@@ -1,3 +1,8 @@
+filters:
+  and:
+    - '!file.path.containsAny("Codex", "DM")'
+    - file.path.contains("_Heroes/Best Friends")
+    - '!file.name.containsAny("Heroes", "Best")'
 formulas:
   Age: |+
     586-number(birth_year_GG)
@@ -7,12 +12,6 @@ formulas:
 views:
   - type: table
     name: Best Friends Fight Team
-    filters:
-      and:
-        - file.path.contains("/_Heroes/Best Friends")
-        - '!file.name.contains("Heroes")'
-        - '!file.name.contains("Best")'
-        - party == link("Wiki/People/_Heroes/Best Friends Fight Team/Best Friends Fight Team")
     order:
       - file.name
       - name
