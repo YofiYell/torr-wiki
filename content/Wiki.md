@@ -1,0 +1,117 @@
+---
+publish: true
+created: 2026-11-09T01:53:14.000Z
+modified: 2026-11-09T12:53:58.988Z
+---
+
+# World of Torr Wiki Home
+
+- **Campaign**
+  - **Quests**
+    - **Completed**
+      - [[Get Milli to Safety]]
+      - [[Survive the Labyrinth]]
+    - [[Investigate the "Elder Sun"]]
+    - [[Quests.base|Quests]]
+  - **Sessions**
+    - [[Session 1]]
+    - [[Session 2]]
+    - [[Session 3]]
+    - [[Session 4]]
+    - [[Session 5]]
+    - [[Session 6]]
+  - [[Almanac]]
+  - [[Campaign/Heroes]]
+  - [[Party Connections]]
+- **Encyclopedia**
+  - **Cultures**
+    - [[Corinthian]]
+    - [[Eldian]]
+    - [[Elivandran]]
+    - [[Nimarassi]]
+  - **Faiths & Mythology**
+    - **Gods**
+      - [[Cor]]
+      - [[Encor]]
+    - [[Circle of Blessed Renewal]]
+    - [[Corish (Person)]]
+    - [[Corism]]
+    - [[Great Tree]]
+    - [[White Stag]]
+  - **Flora & Fauna**
+    - [[Buckberries]]
+    - [[Kestrin]]
+  - **Magic Items**
+    - [[Brother's Spellbook]]
+  - **Sapient Species**
+    - [[Lycanthropes]]
+    - [[Therianthropes]]
+  - **[[Solar System]]**
+    - **Planets**
+    - **Stars**
+      - [[Ensola]]
+      - [[Sola]]
+    - [[Ilova (Moon of Torr)]]
+    - [[Torr]]
+- **Events & History**
+  - **[[Great Eldian War]]**
+    - [[Skirmish at Greenbridge Crossing]]
+  - **[[Timelines]]**
+  - [[Reinegan]]
+  - [[Rothletach & Dolnetach]]
+- **Maps**
+- **People**
+  - **\_Heroes**
+    - **[[Campaign/Heroes]]**
+      - [[Aerin 2]]
+      - [[Ash 1]]
+      - [[Gomwick]]
+      - [[Meeka]]
+      - [[Tilde]]
+    - [[_Heroes.base|_Heroes]]
+  - **z\_Minor**
+    - [[Balthus Salazin]]
+    - [[Garthri Ironhand]]
+    - [[Libera]]
+    - [[Madam Valentine]]
+    - [[Mildred Pickering]]
+    - [[Millicent of Goldleaf]]
+    - [[Padmina of Belegorn]]
+    - [[Sister Charity]]
+    - [[Wala]]
+  - [[_Party Connections.base|_Party Connections]]
+  - [[Aloysius Gerhardt III]]
+  - [[Barynthus Gerhardt]]
+  - [[Calwen Wrencall]]
+  - [[Cheziré Thessaly]]
+  - [[Cornelius Gerhardt]]
+  - [[Gerhardt the Gold]]
+  - [[Ilovia]]
+  - [[Ragall the Red]]
+  - [[Rowena Rumblefoot]]
+- **Places**
+  - **[[Eldia - Region]]**
+    - **[[New Calaban]]**
+      - [[Central Commission (CIFSA)]]
+      - [[Church of the First Mother]]
+      - [[Founder's Square]]
+      - [[Garth's]]
+      - [[Jaja Goethe’s Honeyhaus]]
+      - [[Labyrinth at New Calaban]]
+      - [[Pearl Lounge]]
+      - [[Rowena's Cottage]]
+      - [[Schönhaven]]
+  - **[[Elivandra - Island]]**
+    - [[Elivandra - Castle]]
+  - **[[Nimaràs Forest]]**
+  - **[[Orun]]**
+  - [[Corinth - Island]]
+- **Polities & Powers**
+  - **[[Eldia - Nation]]**
+    - [[Commission for Irregular Sanction Field Action (CIFSA)]]
+  - [[Corinth - Nation]]
+  - [[Daughters of Ilovia]]
+  - [[Erhellia Church]]
+  - [[Mages of Elivandra]]
+- **z\_Attachments**
+- [[Homebrew.base|Homebrew]]
