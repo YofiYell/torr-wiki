@@ -1,0 +1,19 @@
+filters:
+  and:
+    - file.path.startsWith("Wiki/People/")
+    - met_party == true
+views:
+  - type: table
+    name: View
+    order:
+      - file.name
+      - species
+      - familiarity
+      - disposition
+      - last_contact
+      - related_locations
+    sort:
+      - property: last_contact
+        direction: DESC
+    columnSize:
+      note.related_locations: 407

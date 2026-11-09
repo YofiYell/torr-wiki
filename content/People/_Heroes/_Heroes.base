@@ -1,0 +1,28 @@
+formulas:
+  Age: |+
+    586-number(birth_year_GG)
+
+
+  Species/Subspecies: if(!subspecies.isEmpty(),subspecies,species)
+views:
+  - type: table
+    name: Best Friends Fight Team
+    filters:
+      and:
+        - file.folder == "Wiki/People/_Heroes/Best Friends Fight Team"
+        - '!file.name.contains("Heroes")'
+        - '!file.name.contains("Best")'
+        - party == link("Wiki/People/_Heroes/Best Friends Fight Team/Best Friends Fight Team")
+    order:
+      - file.name
+      - name
+      - surname
+      - formula.Age
+      - formula.Species/Subspecies
+      - class
+      - subclass
+      - related_locations
+      - related_persons
+    columnSize:
+      formula.Species/Subspecies: 86
+      note.related_locations: 248

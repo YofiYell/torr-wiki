@@ -1,7 +1,9 @@
 ---
 publish: true
+permalink: index
+title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-09T12:53:58.988Z
+modified: 2026-11-09T13:56:11.308Z
 ---
 
 # World of Torr Wiki Home
@@ -21,7 +23,7 @@ modified: 2026-11-09T12:53:58.988Z
     - [[Session 5]]
     - [[Session 6]]
   - [[Almanac]]
-  - [[Campaign/Heroes]]
+  - [[Heroes]]
   - [[Party Connections]]
 - **Encyclopedia**
   - **Cultures**
@@ -29,6 +31,7 @@ modified: 2026-11-09T12:53:58.988Z
     - [[Eldian]]
     - [[Elivandran]]
     - [[Nimarassi]]
+  - **Deities & Religions**
   - **Faiths & Mythology**
     - **Gods**
       - [[Cor]]
@@ -41,13 +44,14 @@ modified: 2026-11-09T12:53:58.988Z
   - **Flora & Fauna**
     - [[Buckberries]]
     - [[Kestrin]]
+  - **Holidays & Important Events**
   - **Magic Items**
     - [[Brother's Spellbook]]
+  - **Organizations**
   - **Sapient Species**
     - [[Lycanthropes]]
     - [[Therianthropes]]
   - **[[Solar System]]**
-    - **Planets**
     - **Stars**
       - [[Ensola]]
       - [[Sola]]
@@ -59,12 +63,14 @@ modified: 2026-11-09T12:53:58.988Z
   - **[[Timelines]]**
   - [[Reinegan]]
   - [[Rothletach & Dolnetach]]
-- **Maps**
+- **Homebrew**
+  - [[Circle of Overgrowth]]
+  - [[Homebrew.base|Homebrew]]
 - **People**
   - **\_Heroes**
-    - **[[Campaign/Heroes]]**
-      - [[Aerin 2]]
-      - [[Ash 1]]
+    - **[[Best Friends Fight Team]]**
+      - [[Aerin]]
+      - [[Ash]]
       - [[Gomwick]]
       - [[Meeka]]
       - [[Tilde]]
@@ -105,6 +111,7 @@ modified: 2026-11-09T12:53:58.988Z
     - [[Elivandra - Castle]]
   - **[[Nimaràs Forest]]**
   - **[[Orun]]**
+    - **Nimaràs Forest**
   - [[Corinth - Island]]
 - **Polities & Powers**
   - **[[Eldia - Nation]]**
@@ -113,5 +120,8 @@ modified: 2026-11-09T12:53:58.988Z
   - [[Daughters of Ilovia]]
   - [[Erhellia Church]]
   - [[Mages of Elivandra]]
-- **z\_Attachments**
-- [[Homebrew.base|Homebrew]]
+- **Powers**
+  - **Eldia - Nation**
+  - **Eldia (Nation)**
+- **Solar System**
+- **Timelines**

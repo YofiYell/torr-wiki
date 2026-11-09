@@ -1,0 +1,17 @@
+views:
+  - type: table
+    name: View
+    filters:
+      and:
+        - file.folder == "Wiki/Campaign/Quests"
+        - file.name != "Quests.base"
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - quest_giver
+      - session_assigned
+      - session_concluded
+      - related_locations
