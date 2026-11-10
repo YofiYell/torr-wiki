@@ -1,3 +1,12 @@
+---
+publish: true
+permalink: index
+title: Welcome to Torr
+created: 2026-11-09T01:53:14.000Z
+modified: 2026-11-10T05:14:04.382Z
+published: 2026-11-10T05:14:04.382Z
+---
+
 # World of Torr Wiki Home
 
 - **\_Build**
