@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T05:31:06.835Z
-modified: 2026-11-10T09:04:06.539Z
-published: 2026-11-10T09:04:06.539Z
+modified: 2026-11-10T11:53:33.099Z
+published: 2026-11-10T11:53:33.099Z
 tags:
   - dnd-character
   - elf
@@ -40,32 +40,32 @@ wis: 16
 cha: 12
 ---
 
-> [!char]- Character Sheet
->
-> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/161061607" style="width: 100%; height: 1000px; border: none;"></iframe></div>
-
 ## Overview
 
 > [!tip]
 > First impressions. A paragraph or so. Broad strokes. Use **landmark**,  - hidden, and _secret_ formatting
 
----
+> [!quote] Quote/ Epithet
+> _"This is a quote "_
 
-> [!quote] Aeslom, Year's Even, 586
-> _"Seeing if this is better"_
+> [!char]- Character Sheet
+>
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/161061607" style="width: 100%; height: 1000px; border: none;"></iframe></div>
+
+---
 
 ### Appearance
 
-**Voice Cue:**
-**Visual Cue:**
-
 ### Personality
+
+What's the impression they give off when interacting with others?
 
 ### Background
 
 - Born and raised in [[Belegorn Village]]
 - Former associate of ...
 - The pivotal event that caused them to leave home: ...
+-
 
 ### Morals & Values
 

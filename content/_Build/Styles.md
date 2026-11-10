@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-10T01:15:32.443Z
-modified: 2026-11-10T10:44:03.542Z
-published: 2026-11-10T10:44:03.542Z
+modified: 2026-11-10T12:05:28.259Z
+published: 2026-11-10T12:05:28.259Z
 unlisted: true
 quartz_asset: css
 ---
@@ -102,5 +102,28 @@ quartz_asset: css
 /* Reminder */
 #quartz-body .callout[data-callout="reminder"] {
     --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/bell.svg");
+}
+
+/* ===== quartz-ITS-quote-callout.md ===== */
+
+/* QUARTZ — ITS Quote Callout Compatibility */
+
+#quartz-body .callout[data-callout="quote"] {
+    --callout-color: var(--darkgray);
+    --color: var(--darkgray);
+
+    background-color: var(--light);
+    border-left: 4px solid var(--darkgray);
+}
+
+#quartz-body .callout[data-callout="quote"]
+> .callout-title > .callout-icon {
+    display: none;
+}
+
+#quartz-body .callout[data-callout="quote"]
+> .callout-title .callout-title-inner > p {
+    display: inline;
+    margin: 0;
 }
 ```
