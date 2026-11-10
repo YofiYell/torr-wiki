@@ -1,11 +1,10 @@
+filters:
+  and:
+    - file.folder.contains("Campaign/Quests")
+    - file.name != "Quests.base"
 views:
   - type: table
     name: View
-    filters:
-      and:
-        - file.path.contains("Campaign/Quests")
-        - file.name != "Quests.base"
-        - '!file.path.contains("Codex")'
     groupBy:
       property: status
       direction: ASC

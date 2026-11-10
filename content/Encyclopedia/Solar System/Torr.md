@@ -1,10 +1,3 @@
----
-publish: true
-created: 2026-10-29T03:43:22.000Z
-modified: 2026-11-09T12:53:58.765Z
-published: 2026-11-09T12:53:58.765Z
----
-
 # Strange Shadows
 
 Because of Torr’s [[Solar System#Twin Suns|Twin Suns]], light quality can fluctuate from day to day, and around each dusk, depending on which suns are present and how high in the sky they are.

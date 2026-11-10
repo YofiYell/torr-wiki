@@ -1,37 +1,33 @@
 ---
 publish: true
-created: 2026-11-09T10:57:04.977Z
-modified: 2026-11-10T01:37:12.214Z
-published: 2026-11-10T01:37:12.214Z
+created: 2026-11-09T05:31:06.835Z
+modified: 2026-11-10T04:23:35.703Z
+published: 2026-11-10T04:23:35.703Z
 tags:
   - dnd-character
   - pugilist
-  - therianthrope
-  - nycterianthrope
-  - werebat
-  - BFFT
-name: Mikleine
+name: Meeka
 surname: Brandis
-birth_year_GG: 566
+alignment: Chaotic Good
 background: Soldier
-current_location: "[[New Calaban]]"
-species: Therianthrope (Werebeast) 5.5e
 level: 3
+current_location: "[[New Calaban]]"
 class: Pugilist 3
 subclass: Sweet Science
-related_locations:
-  - "[[Rowena's Cottage]]"
-  - "[[Garth's]]"
+species: Therianthrope (Werebeast) 5.5e
+lineage: Nycterianthrope (Werebat)
+birth_year_GG: 565
 dndbeyond_id: 163719977
 party: "[[Best Friends Fight Team]]"
-related_persons:
-  - "[[Rowena Rumblefoot]]"
-  - "[[Garthri Ironhand]]"
-  - "[[Wala]]"
 affiliations:
 origin_location:
-home_location:
-alignment: Chaotic Good
+home_location: "[[Rowena's Cottage]]"
+related_locations:
+  - "[[Garth's]]"
+related_persons:
+  - "[[Rowena Rumblefoot]]"
+  - "[[Wala]]"
+  - "[[Garthri Ironhand]]"
 hp: 28
 modifier: 1
 ac: 11
@@ -43,61 +39,44 @@ con: 14
 int: 8
 wis: 13
 cha: 10
-lineage: Nycterianthrope
 ---
 
 > [!char]- Character Sheet
 >
-> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/163719977" height="1000" style="width: 100%; border: none; display: block;"></iframe></div>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/163719977" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
 ## Overview
 
-Found by captain [[Otto Brandis]]'s patrol company at age 14 in 580 GG on the outskirts of [[New Calaban]]. Surprised to find him only half-dead, unlike his companions in the [[corpse pit]] where he had been dumped.
+> [!tip]
+> First impressions. A paragraph or so. Broad strokes. Use **landmark**,  - hidden, and _secret_ formatting
 
-Organized street kids to take care of street dogs. Checks in on them daily. He's pretty well known by the street kids.
+---
 
-[[Wala]] - best friend. Wererat. Came up with the name "Stray from the Southern March"
+> [!cite] Quote/ Epithet
+> _" "_
 
-likes to work out
+### Appearance
 
-Victorious in a qualifier in an undercity tournament to qualify for the overcity tournament. (Should be a long way off)
+### Personality
 
-Amnesia
+What's the impression they give off when interacting with others?
 
-Experiment
-
-14 when found by Otto Brandis in the thing. Made to fight dogs. Killed a (Lot) of dogs, but only remembers one. That's his first recent memory.
-
-Noticed by someone related to childhood because of the fact that he won the undercity tourney.
-
-[[Sisters of Quorilith]]
-
-## Appearance & Mannerisms
-
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
-
-## Background & Roots
+### Background
 
 - Born and raised in ...
 - Former associate of ...
 - The pivotal event that caused them to leave home: ...
 
-## Motivations & Beliefs
+### Morals & Values
 
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
+How do they make choices and why?
 
-## Key Relationships
+### Livelihood
 
-- **Party Ties:**
-- **World Ties:**
+How do they make their living? How do they support themselves day to day? On whom or what do they depend?
 
-## Major Marks on the World
+### Connections:
 
--
+To what persons or groups are they affiliated and in what ways?
+
+---

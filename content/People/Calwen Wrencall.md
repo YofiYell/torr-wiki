@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-08T02:01:48.000Z
-modified: 2026-11-09T12:53:58.849Z
-published: 2026-11-09T12:53:58.849Z
+modified: 2026-11-09T05:31:05.860Z
+published: 2026-11-09T05:31:05.860Z
 met_party: true
 name: Calwen Wrencall
 disposition: Wary

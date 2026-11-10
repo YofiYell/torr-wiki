@@ -1,25 +1,26 @@
 ---
 publish: true
-created: 2026-11-09T11:10:20.810Z
-modified: 2026-11-10T01:39:07.945Z
-published: 2026-11-10T01:39:07.945Z
+created: 2026-11-09T05:31:05.869Z
+modified: 2026-11-10T04:54:09.506Z
+published: 2026-11-10T04:54:09.506Z
 tags:
   - dnd-character
   - elf
   - paladin
 name: Aerin
 surname:
-birth_year_GG: 466
 background: Soldier
-current_location: "[[New Calaban]]"
+birth_year_GG: 465
 species: Elf
-lineage: Wood Elf
 level: 3
 class: Paladin 3
 subclass: Oath of the Ancients
 related_locations:
+  - "[[Nimaràs Forest]]"
 dndbeyond_id: 164811578
 party: "[[Best Friends Fight Team]]"
+current_location: "[[New Calaban]]"
+lineage: Wood Elf
 related_persons:
 affiliations:
 origin_location: "[[Nimaràs Forest]]"
@@ -42,204 +43,41 @@ cha: 14
 >
 > <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
 ## Overview
 
-## Appearance & Mannerisms
+> [!tip]
+> First impressions. A paragraph or so. Broad strokes. Use **landmark**,  - hidden, and _secret_ formatting
 
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
+---
 
-## Background & Roots
+> [!cite] Quote/ Epithet
+> _" "_
 
-- Born and raised in ...
-- Former associate of ...
-- The pivotal event that caused them to leave home: ...
+### Appearance
 
-## Motivations & Beliefs
+**Voice Cue:**
+**Visual Cue:**
 
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
+### Personality
 
-## Key Relationships
+What's the impression they give off when interacting with others?
 
-- **Party Ties:**
-- **World Ties:**
-
-## Major Marks on the World
-
-- > \[!char]- Character Sheet
-
-> <iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
-## Overview
-
-## Appearance & Mannerisms
-
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
-
-## Background & Roots
+### Background
 
 - Born and raised in [[Nimaràs Forest]]
 - Former associate of ...
 - The pivotal event that caused them to leave home: ...
 
-## Motivations & Beliefs
+### Morals & Values
 
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
+How do they make choices and why?
 
-## Key Relationships
+### Livelihood
 
-- **Party Ties:**
-- **World Ties:**
+How do they make their living? How do they support themselves day to day? On whom or what do they depend?
 
-## Major Marks on the World
+### Connections:
 
-- > \[!char]- Character Sheet
+To what persons or groups are they affiliated and in what ways?
 
-> <iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
-## Overview
-
-## Appearance & Mannerisms
-
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
-
-## Background & Roots
-
-- Born and raised in ...
-- Former associate of ...
-- The pivotal event that caused them to leave home: ...
-
-## Motivations & Beliefs
-
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
-
-## Key Relationships
-
-- **Party Ties:**
-- **World Ties:**
-
-## Major Marks on the World
-
-- > \[!char]- Character Sheet
-
-> <iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
-## Overview
-
-## Appearance & Mannerisms
-
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
-
-## Background & Roots
-
-- Born and raised in ...
-- Former associate of ...
-- The pivotal event that caused them to leave home: ...
-
-## Motivations & Beliefs
-
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
-
-## Key Relationships
-
-- **Party Ties:**
-- **World Ties:**
-
-## Major Marks on the World
-
-- > \[!char]- Character Sheet
-
-<iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
-## Overview
-
-## Appearance & Mannerisms
-
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
-
-## Background & Roots
-
-- Born and raised in [[Nimaràs Forest]]
-- Former associate of ...
-- The pivotal event that caused them to leave home: ...
-
-## Motivations & Beliefs
-
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
-
-## Key Relationships
-
-- **Party Ties:**
-- **World Ties:**
-
-## Major Marks on the World
-
-- > \[!char]- Character Sheet
-
-<iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
-## Overview
-
-## Appearance & Mannerisms
-
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
-
-## Background & Roots
-
-- Born and raised in [[Nimaràs Forest]]
-- Former associate of ...
-- The pivotal event that caused them to leave home: ...
-
-## Motivations & Beliefs
-
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
-
-## Key Relationships
-
-- **Party Ties:**
-- **World Ties:**
-
-## Major Marks on the World
-
--
+---

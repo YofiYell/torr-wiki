@@ -1,10 +1,3 @@
----
-publish: true
-created: 2026-11-09T01:01:42.000Z
-modified: 2026-11-09T12:53:58.771Z
-published: 2026-11-09T12:53:58.771Z
----
-
 # Twin Suns
 
 The planet [[Torr|Torr]] resides in a binary star system. The residents of [[Places/Orun/Eldia|Eldia]] & [[Corinth - Nation|Corinth]]

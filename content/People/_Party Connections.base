@@ -1,6 +1,5 @@
 filters:
   and:
-    - '!file.path.containsAny("Codex", "DM")'
     - file.path.contains("People/")
     - met_party == true
 views:
@@ -12,6 +11,7 @@ views:
       - familiarity
       - disposition
       - last_contact
+      - occupation
       - related_locations
     sort:
       - property: last_contact

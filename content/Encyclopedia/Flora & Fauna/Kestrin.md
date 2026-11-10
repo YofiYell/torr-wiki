@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-10-30T02:56:54.000Z
-modified: 2026-11-09T12:53:58.840Z
-published: 2026-11-09T12:53:58.840Z
+modified: 2026-11-09T05:31:05.846Z
+published: 2026-11-09T05:31:05.846Z
 srd_origin: homebrew
 brew_type: creature
 creature_type: beast

@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-08T04:25:58.000Z
-modified: 2026-11-09T12:53:58.951Z
-published: 2026-11-09T12:53:58.951Z
+modified: 2026-11-09T05:31:07.787Z
+published: 2026-11-09T05:31:07.787Z
 occupation: MOC
 familiarity: Acquainted
 met_party: true

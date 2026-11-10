@@ -1,8 +1,7 @@
 filters:
   and:
-    - '!file.path.containsAny("Codex", "DM")'
-    - file.path.contains("_Heroes/Best Friends")
-    - '!file.name.containsAny("Best")'
+    - file.folder.contains("People/_Heroes/")
+    - party == link("Wiki/People/_Heroes/Best Friends Fight Team/Best Friends Fight Team")
 formulas:
   Age: |+
     586-number(birth_year_GG)
@@ -15,16 +14,19 @@ properties:
 views:
   - type: table
     name: Best Friends Fight Team
+    filters:
+      and:
+        - "!file.name.containsAny()"
     order:
       - file.name
       - name
       - surname
       - formula.Age
       - formula.Species/Subspecies
-      - subclass
       - class
+      - subclass
       - related_locations
       - related_persons
     columnSize:
-      formula.Species/Subspecies: 86
+      formula.Species/Subspecies: 118
       note.related_locations: 248

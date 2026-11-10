@@ -1,0 +1,1 @@
+Cor is the god prosperity and order, and ruler of the Greater Sun, [[Sola]]. He is worshipped by the [[Corish (Person)|Corish]] humans of [[Corinth - Nation|Corinth]] and [[Eldia - Nation|Eldia]]. His brother is [[Encor]] god of chaos and ruler of [[Ensola]], the Lesser Sun.

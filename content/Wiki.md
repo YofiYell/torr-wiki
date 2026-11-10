@@ -1,14 +1,7 @@
----
-publish: true
-permalink: index
-title: Welcome to Torr
-created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-09T21:05:29.507Z
-published: 2026-11-09T21:05:29.507Z
----
-
 # World of Torr Wiki Home
 
+- **\_Build**
+  - [[Styles]]
 - **Campaign**
   - **Quests**
     - **Completed**
@@ -24,6 +17,7 @@ published: 2026-11-09T21:05:29.507Z
     - [[Session 5]]
     - [[Session 6]]
   - [[Almanac]]
+  - [[Best Friends Fight Team]]
   - [[Heroes]]
   - [[Party Connections]]
 - **Encyclopedia**
@@ -53,6 +47,7 @@ published: 2026-11-09T21:05:29.507Z
     - [[Lycanthropes]]
     - [[Therianthropes]]
   - **[[Solar System]]**
+    - **Planets**
     - **Stars**
       - [[Ensola]]
       - [[Sola]]
@@ -67,6 +62,7 @@ published: 2026-11-09T21:05:29.507Z
 - **Homebrew**
   - [[Circle of Overgrowth]]
   - [[Homebrew.base|Homebrew]]
+- **Maps**
 - **People**
   - **\_Heroes**
     - **[[Best Friends Fight Team]]**
@@ -108,12 +104,13 @@ published: 2026-11-09T21:05:29.507Z
       - [[Labyrinth at New Calaban]]
       - [[Pearl Lounge]]
       - [[Rowena's Cottage]]
+      - [[Rowena’s Cottage]]
       - [[Schönhaven]]
   - **[[Elivandra - Island]]**
     - [[Elivandra - Castle]]
   - **[[Nimaràs Forest]]**
+    - [[Belegorn Village]]
   - **[[Orun]]**
-    - **Nimaràs Forest**
   - [[Corinth - Island]]
 - **Polities & Powers**
   - **[[Eldia - Nation]]**
@@ -122,8 +119,8 @@ published: 2026-11-09T21:05:29.507Z
   - [[Daughters of Ilovia]]
   - [[Erhellia Church]]
   - [[Mages of Elivandra]]
-- **Powers**
-  - **Eldia - Nation**
-  - **Eldia (Nation)**
+  - [[Red Pelts]]
+  - [[Sisters of Quorilith]]
 - **Solar System**
-- **Timelines**
+- **z\_Attachments**
+- [[Homebrew.base|Homebrew]]

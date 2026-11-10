@@ -1,10 +1,3 @@
----
-publish: true
-created: 2026-11-09T01:31:42.000Z
-modified: 2026-11-09T12:53:58.992Z
-published: 2026-11-09T12:53:58.992Z
----
-
 The [[Corinthian|Corinthians]] make landfall at [[Port Caine]] in 503 GG. Their explorations into the ruins of an ancient human society on Orun and the relics they found were their primary impetus to "take back the land".
 
 The Humans advance their settlements westward, establishing the town of [[Greenbridge]] on the Northeastern shores of the [[White River]] in 504 GG. The land of the river valley near Greenbridge was among the sought-after fertile soil of notable scarcity in the harder northern lands.

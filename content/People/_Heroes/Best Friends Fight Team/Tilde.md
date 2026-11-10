@@ -1,29 +1,30 @@
 ---
 publish: true
-created: 2026-11-09T11:09:04.274Z
-modified: 2026-11-10T01:38:11.874Z
-published: 2026-11-10T01:38:11.874Z
+created: 2026-11-09T05:31:06.828Z
+modified: 2026-11-10T03:22:06.957Z
+published: 2026-11-10T03:22:06.957Z
 tags:
   - dnd-character
   - owlin
   - monk
 name: Tilde
 surname:
-birth_year_GG: 567
+alignment: Chaotic Good
 background: Acolyte
-current_location: "[[New Calaban]]"
-species: Owlin
 level: 3
+current_location: "[[New Calaban]]"
 class: Monk 3
 subclass: Warrior of Mercy 5.5e
-related_locations:
+species: Owlin
+lineage: ""
+birth_year_GG: 567
 dndbeyond_id: 164789231
 party: "[[Best Friends Fight Team]]"
-related_persons:
 affiliations:
 origin_location:
 home_location:
-alignment: Chaotic Good
+related_locations:
+related_persons:
 hp: 24
 modifier: 3
 ac: 13
@@ -38,8 +39,8 @@ cha: 12
 ---
 
 > [!char]- Character Sheet
->
-> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164789231" style="width: 100%; height: 1000px; border: none;"></iframe></div>
+
+<div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164789231" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
 > [!quote] Character Quote or Epithet
 > _"I didn't ask what was in the crypt, I asked how much it pays."_
@@ -71,4 +72,6 @@ cha: 12
 
 ## Major Marks on the World
 
--
+- > \[!example]- Character Sheet
+
+> <iframe src="https://www.dndbeyond.com/characters/164789231"; style: width=100%; height=1000px;></iframe>

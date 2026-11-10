@@ -1,10 +1,3 @@
----
-publish: true
-created: 2026-10-29T17:48:42.000Z
-modified: 2026-11-09T12:53:59.000Z
-published: 2026-11-09T12:53:59.000Z
----
-
 # Rothletach
 
 To the people of Corinth, the sun is their everything. On Torr which has two suns, solar eclipses are frequent, occurring once every 7 years. Generally the larger sun passes in front of the smaller one, causing a reduction in brightness and a reddening of the sky. In a religious context, at this time, Cor and his son Encor are said to be in perfect unity of will. It is a time of great prosperity and a good omen for business contracts, marriages, and large purchases. This is referred to as _Rothletach_, the Day of Red Light.

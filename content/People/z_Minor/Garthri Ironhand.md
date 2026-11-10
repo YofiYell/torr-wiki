@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-08T21:20:12.000Z
-modified: 2026-11-09T12:53:58.956Z
-published: 2026-11-09T12:53:58.956Z
+modified: 2026-11-09T05:31:07.790Z
+published: 2026-11-09T05:31:07.790Z
 name: Garthri
 surname: Ironhand
 species: Dwarf

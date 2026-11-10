@@ -1,32 +1,32 @@
 ---
 publish: true
-created: 2026-11-09T09:20:58.022Z
-modified: 2026-11-10T01:38:54.831Z
-published: 2026-11-10T01:38:54.831Z
+created: 2026-11-09T05:31:06.835Z
+modified: 2026-11-10T04:30:54.073Z
+published: 2026-11-10T04:30:54.073Z
 tags:
   - dnd-character
   - elf
   - druid
 name: Aeslom
 surname:
-birth_year_GG: 555
+alignment: Neutral Good
 background: Guide
-current_location: "[[New Calaban]]"
-species: Elf
 level: 3
+current_location: "[[New Calaban]]"
 class: Druid 3
 subclass: Circle of Overgrowth
-related_locations:
-  - "[[Rowena's Cottage]]"
+species: Elf
+lineage: Wood Elf
+birth_year_GG: 555
 dndbeyond_id: 161061607
 party: "[[Best Friends Fight Team]]"
-related_persons:
-  - "[[Rowena Rumblefoot]]"
-  - "[[Padmina of Belegorn]]"
 affiliations:
 origin_location: "[[Belegorn Village]]"
 home_location: "[[Rowena's Cottage]]"
-alignment: Neutral Good
+related_locations:
+related_persons:
+  - "[[Rowena Rumblefoot]]"
+  - "[[Padmina of Belegorn]]"
 hp: 24
 modifier: 1
 ac: 11
@@ -38,41 +38,45 @@ con: 14
 int: 13
 wis: 16
 cha: 12
-lineage: Wood Elf
 ---
 
 > [!char]- Character Sheet
 >
 > <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/161061607" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
-
 ## Overview
 
-## Appearance & Mannerisms
+> [!tip]
+> First impressions. A paragraph or so. Broad strokes. Use **landmark**,  - hidden, and _secret_ formatting
 
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
+---
 
-## Background & Roots
+> [!cite] Quote/ Epithet
+> _" "_
+
+### Appearance
+
+**Voice Cue:**
+**Visual Cue:**
+
+### Personality
+
+### Background
 
 - Born and raised in [[Belegorn Village]]
 - Former associate of ...
 - The pivotal event that caused them to leave home: ...
 
-## Motivations & Beliefs
+### Morals & Values
 
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
+How do they make choices and why?
 
-## Key Relationships
+### Livelihood
 
-- **Party Ties:**
-- **World Ties:**
+How do they make their living? How do they support themselves day to day? On whom or what do they depend?
 
-## Major Marks on the World
+### Connections:
 
--
+To what persons or groups are they affiliated and in what ways?
+
+---
