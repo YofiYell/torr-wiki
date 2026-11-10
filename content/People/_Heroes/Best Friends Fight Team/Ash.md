@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T05:31:06.835Z
-modified: 2026-11-10T04:30:54.073Z
-published: 2026-11-10T04:30:54.073Z
+modified: 2026-11-10T09:04:06.539Z
+published: 2026-11-10T09:04:06.539Z
 tags:
   - dnd-character
   - elf
@@ -51,8 +51,8 @@ cha: 12
 
 ---
 
-> [!cite] Quote/ Epithet
-> _" "_
+> [!quote] Aeslom, Year's Even, 586
+> _"Seeing if this is better"_
 
 ### Appearance
 
