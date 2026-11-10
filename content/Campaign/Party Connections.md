@@ -6,4 +6,4 @@ The [[Campaign/Heroes/Heroes|party]] visited the proprietor of the [[Pearl Loung
 
 Rowena hosts both [[Ash|Ash]] and [[Meeka|Meeka]] in her [[Rowena’s Cottage|cottage]], though Ash has been there for much longer. Last she saw the party in [[Session 5]], she gave the [[Campaign/Heroes/Heroes|party]] grave news regarding Ash’s condition.
 
-![[_Party Connections.base]]
+![[Party Connections.base]]

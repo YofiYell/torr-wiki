@@ -3,8 +3,8 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T22:46:42.678Z
-published: 2026-11-10T22:46:42.678Z
+modified: 2026-11-10T22:54:57.553Z
+published: 2026-11-10T22:54:57.553Z
 ---
 
 # World of Torr Wiki Home
@@ -86,7 +86,7 @@ published: 2026-11-10T22:46:42.678Z
     - [[Padmina of Belegorn]]
     - [[Sister Charity]]
     - [[Wala]]
-  - [[_Party Connections.base|_Party Connections]]
+  - [[Party Connections.base|_Party Connections]]
   - [[Aloysius Gerhardt III]]
   - [[Barynthus Gerhardt]]
   - [[Calwen Wrencall]]
