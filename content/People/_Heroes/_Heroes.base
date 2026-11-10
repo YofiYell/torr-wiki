@@ -8,7 +8,10 @@ formulas:
     586-number(birth_year_GG)
 
 
-  Species/Subspecies: if(!subspecies.isEmpty(),subspecies,species)
+  Species/Subspecies: if(!lineage.isEmpty(),lineage,species)
+properties:
+  formula.Species/Subspecies:
+    displayName: Species
 views:
   - type: table
     name: Best Friends Fight Team
@@ -18,8 +21,8 @@ views:
       - surname
       - formula.Age
       - formula.Species/Subspecies
-      - class
       - subclass
+      - class
       - related_locations
       - related_persons
     columnSize:

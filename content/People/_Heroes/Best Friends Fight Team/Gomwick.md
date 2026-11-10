@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T10:51:24.379Z
-modified: 2026-11-09T12:53:58.877Z
-published: 2026-11-09T12:53:58.877Z
+modified: 2026-11-10T01:25:16.664Z
+published: 2026-11-10T01:25:16.664Z
 tags:
   - dnd-character
   - orc
@@ -13,7 +13,6 @@ birth_year_GG: 564
 background: Artisan
 current_location: "[[New Calaban]]"
 species: Orc
-subspecies: ""
 level: 3
 class: Wizard 3
 subclass: Illusionist

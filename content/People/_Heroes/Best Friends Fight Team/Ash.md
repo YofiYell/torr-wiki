@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T09:20:58.022Z
-modified: 2026-11-09T12:53:58.901Z
-published: 2026-11-09T12:53:58.901Z
+modified: 2026-11-10T01:24:40.194Z
+published: 2026-11-10T01:24:40.194Z
 tags:
   - dnd-character
   - elf
@@ -13,7 +13,6 @@ birth_year_GG: 555
 background: Guide
 current_location: "[[New Calaban]]"
 species: Elf
-subspecies: ""
 level: 3
 class: Druid 3
 subclass: Circle of Overgrowth
@@ -39,6 +38,7 @@ con: 14
 int: 13
 wis: 16
 cha: 12
+lineage: Wood Elf
 ---
 
 > [!char]- Character Sheet

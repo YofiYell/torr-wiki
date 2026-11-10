@@ -1,19 +1,21 @@
 ---
 publish: true
 created: 2026-11-09T10:57:04.977Z
-modified: 2026-11-10T01:21:55.350Z
-published: 2026-11-10T01:21:55.350Z
+modified: 2026-11-10T01:35:24.175Z
+published: 2026-11-10T01:35:24.175Z
 tags:
   - dnd-character
-  - therianthrope-(werebeast)-5.5e
   - pugilist
+  - therianthrope
+  - nycterianthrope
+  - werebat
+  - BFFT
 name: Mikleine
 surname: Brandis
 birth_year_GG: 566
 background: Soldier
 current_location: "[[New Calaban]]"
 species: Therianthrope (Werebeast) 5.5e
-subspecies: Nycterianthrope
 level: 3
 class: Pugilist 3
 subclass: Sweet Science
@@ -41,11 +43,12 @@ con: 14
 int: 8
 wis: 13
 cha: 10
+lineage: Nycterianthrope
 ---
 
 > [!char]- Character Sheet
 >
-> <iframe src="https://www.dndbeyond.com/characters/163719977" height="1000" style="width: 100%; border: none;"></iframe>
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/163719977" height="1000" style="width: 100%; border: none; display: block;"></iframe></div>
 
 > [!quote] Character Quote or Epithet
 > _"I didn't ask what was in the crypt, I asked how much it pays."_

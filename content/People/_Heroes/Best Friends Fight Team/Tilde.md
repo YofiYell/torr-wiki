@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T11:09:04.274Z
-modified: 2026-11-09T12:53:58.889Z
-published: 2026-11-09T12:53:58.889Z
+modified: 2026-11-10T01:25:22.903Z
+published: 2026-11-10T01:25:22.903Z
 tags:
   - dnd-character
   - owlin
@@ -13,7 +13,6 @@ birth_year_GG: 567
 background: Acolyte
 current_location: "[[New Calaban]]"
 species: Owlin
-subspecies: ""
 level: 3
 class: Monk 3
 subclass: Warrior of Mercy 5.5e

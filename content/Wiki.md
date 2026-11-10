@@ -3,8 +3,8 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-09T13:56:11.308Z
-published: 2026-11-09T13:56:11.308Z
+modified: 2026-11-09T21:05:29.507Z
+published: 2026-11-09T21:05:29.507Z
 ---
 
 # World of Torr Wiki Home
@@ -92,6 +92,7 @@ published: 2026-11-09T13:56:11.308Z
   - [[Calwen Wrencall]]
   - [[Cheziré Thessaly]]
   - [[Cornelius Gerhardt]]
+  - [[Edom Elster]]
   - [[Gerhardt the Gold]]
   - [[Ilovia]]
   - [[Ragall the Red]]
