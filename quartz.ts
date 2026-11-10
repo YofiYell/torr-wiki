@@ -6,4 +6,4 @@ export default config
 export const layout = await loadQuartzLayout()
 
 // Patch the configured Explorer instance without modifying the installed npm package.
-patchExplorerFolderNotes()
+patchExplorerFolderNotes(layout)
