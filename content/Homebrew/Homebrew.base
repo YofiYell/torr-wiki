@@ -1,0 +1,15 @@
+filters:
+  and:
+    - srd_origin == "homebrew"
+views:
+  - type: table
+    name: View
+    groupBy:
+      property: brew_type
+      direction: ASC
+    order:
+      - file.name
+      - brew_type
+      - creature_type
+    columnSize:
+      file.name: 176
