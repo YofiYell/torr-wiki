@@ -3,8 +3,8 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T08:19:34.167Z
-published: 2026-11-10T08:19:34.167Z
+modified: 2026-11-10T09:23:07.819Z
+published: 2026-11-10T09:23:07.819Z
 ---
 
 # World of Torr Wiki Home
@@ -50,7 +50,6 @@ published: 2026-11-10T08:19:34.167Z
   - **Flora & Fauna**
     - [[Buckberries]]
     - [[Kestrin]]
-  - **Holidays & Important Events**
   - **Magic Items**
     - [[Brother's Spellbook]]
   - **Organizations**
@@ -66,7 +65,6 @@ published: 2026-11-10T08:19:34.167Z
     - [[Torr]]
 - **Events & History**
   - **[[Great Eldian War]]**
-    - [[Skirmish at Greenbridge Crossing]]
   - **[[Timelines]]**
   - [[Reinegan]]
   - [[Rothletach & Dolnetach]]
@@ -82,7 +80,6 @@ published: 2026-11-10T08:19:34.167Z
       - [[Meeka]]
       - [[Tilde]]
     - [[_Heroes.base|_Heroes]]
-  - **Heroes**
   - **z\_Minor**
     - [[Balthus Salazin]]
     - [[Edom Elster]]

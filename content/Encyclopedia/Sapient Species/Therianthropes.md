@@ -1,8 +1,9 @@
 ---
 publish: true
+draft: true
 created: 2026-11-09T01:11:42.000Z
-modified: 2026-11-09T05:31:04.923Z
-published: 2026-11-09T05:31:04.923Z
+modified: 2026-11-10T09:20:44.097Z
+published: 2026-11-10T09:20:44.097Z
 srd_origin: homebrew
 brew_type: creature
 creature_type: humanoid
