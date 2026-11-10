@@ -7,6 +7,8 @@ import { emitStaticAssets } from "./staticAssets"
 import spaRouterScript from "../../components/scripts/spa.inline"
 // @ts-ignore
 import popoverScript from "../../components/scripts/popover.inline"
+// @ts-ignore - inline script loaded as text by esbuild
+import explorerFolderNotesScript from "../../components/scripts/explorer-folder-notes.inline"
 import baseStyles from "../../styles/base.scss"
 import customStyles from "../../styles/custom.scss"
 import popoverStyle from "../../components/styles/popover.scss"
@@ -338,6 +340,9 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
       // important that this goes *after* component scripts
       // as the "nav" event gets triggered here and we should make sure
       // that everyone else had the chance to register a listener for it
+      // Adapt matching Obsidian Base folder notes in the existing Explorer DOM.
+      // Install before addGlobalPageResources so the SPA router remains last.
+      componentResources.afterDOMLoaded.push(explorerFolderNotesScript)
       addGlobalPageResources(ctx, componentResources)
 
       const useHashing = !ctx.argv.serve
