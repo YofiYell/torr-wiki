@@ -3,8 +3,8 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T22:07:54.769Z
-published: 2026-11-10T22:07:54.769Z
+modified: 2026-11-10T22:46:42.678Z
+published: 2026-11-10T22:46:42.678Z
 ---
 
 # World of Torr Wiki Home
@@ -25,7 +25,7 @@ published: 2026-11-10T22:07:54.769Z
     - [[Session 5]]
     - [[Session 6]]
   - [[Almanac]]
-  - [[Heroes]]
+  - [[Campaign/Heroes]]
   - [[Party Connections]]
 - **Encyclopedia**
   - **Cultures**
@@ -68,13 +68,13 @@ published: 2026-11-10T22:07:54.769Z
   - [[Homebrew.base|Homebrew]]
 - **People**
   - **\_Heroes**
-    - **[[Best Friends Fight Team]]**
+    - **[[Campaign/Heroes/Heroes]]**
       - [[Aerin]]
       - [[Ash]]
       - [[Gomwick]]
       - [[Meeka]]
       - [[Tilde]]
-    - [[_Heroes.base|_Heroes]]
+    - [[Heroes.base|_Heroes]]
   - **z\_Minor**
     - [[Balthus Salazin]]
     - [[Edom Elster]]
