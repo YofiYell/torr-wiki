@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-10-30T02:56:54.000Z
-modified: 2026-11-10T06:37:28.068Z
-published: 2026-11-10T06:37:28.068Z
+modified: 2026-11-10T10:22:35.858Z
+published: 2026-11-10T10:22:35.858Z
 srd_origin: homebrew
 brew_type: creature
 creature_type: beast
@@ -44,19 +44,19 @@ layout: Basic
 
 ## BASIC INFORMATION
 
-## Anatomy
+### Anatomy
 
 Kestrin physiology adapts them toward hunting small prey and foraging in the plains and hills of [[Orun]]. Their strong legs allow them to run at high speeds and leap great distances.
 While omnivorous, kestrin beaks are not well suited to securing prey. They prefer to crush or disable their prey with a powerful stomp before taking their time with their meal.
 Kestrin are flightless, though their wings can aid in balancing when leaping large distances. Their webbed feet with coarse padding underneath allows them to traverse gravelly or muddy terrain with ease.
 The two long feathers that protrude from their crown are not merely for display. Though the colorful variants sported by males of the species are used for mating displays, their rachises are attached to sensory organs allowing them to detect vibrations and changes in air pressure. This same structure also allows finer communication between kestrin, and some say they can sense emotions.
 
-## Genetics and Reproduction
+### Genetics and Reproduction
 
 While hearty creatures, the kestrin population is fragile. Brooding mothers lay a single egg that takes 6 months to develop.
 Eggs take 6 months to fully develop, and are extremely sensitive to temperature. In their later stages, eggs must be carried to geothermal ground in order to fully mature, binding the kestrin life cycle to volcanic foothills and natural hot springs.
 
-## Behaviour
+### Behaviour
 
 Kestrin are very social creatures and they are incredibly territorial, especially around brooding season in the fall. They travel in flocks, migrating as a group to secure food or transport their eggs to hatching grounds.
 Kestrin don't mate for life, however, once a pair produces an egg, they are highly unlikely to separate.

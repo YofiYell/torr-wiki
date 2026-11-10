@@ -3,13 +3,14 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T09:23:07.819Z
-published: 2026-11-10T09:23:07.819Z
+modified: 2026-11-10T10:13:04.520Z
+published: 2026-11-10T10:13:04.520Z
 ---
 
 # World of Torr Wiki Home
 
 - **\_Build**
+  - [[.ignore]]
   - [[Controls]]
   - [[Styles]]
   - [[Theme]]
@@ -52,7 +53,6 @@ published: 2026-11-10T09:23:07.819Z
     - [[Kestrin]]
   - **Magic Items**
     - [[Brother's Spellbook]]
-  - **Organizations**
   - **Sapient Species**
     - [[Lycanthropes]]
     - [[Therianthropes]]
