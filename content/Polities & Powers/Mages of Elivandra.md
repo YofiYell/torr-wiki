@@ -1,1 +1,0 @@
-Generally collectively referred to simply as “Elivandra”, this collection of wise practitioners of the arts trains young mages, and holds its own political sway over the affairs of the [[Kingdom of Corinth]].

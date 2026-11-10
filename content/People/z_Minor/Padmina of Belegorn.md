@@ -1,1 +1,0 @@
-[[Ash|Ash's]] mother.
