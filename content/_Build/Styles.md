@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-10T01:15:32.443Z
-modified: 2026-11-10T12:12:55.151Z
-published: 2026-11-10T12:12:55.151Z
+modified: 2026-11-10T12:15:56.140Z
+published: 2026-11-10T12:15:56.140Z
 unlisted: true
 quartz_asset: css
 ---
@@ -107,6 +107,14 @@ quartz_asset: css
 /* ===== quartz-ITS-quote-callout.md ===== */
 
 /* QUARTZ — ITS Quote Callout Compatibility */
+
+#quartz-body .callout[data-callout="quote"] {
+    --callout-color: var(--darkgray);
+    --color: var(--darkgray);
+
+    background-color: var(--light);
+    border-left: 4px solid var(--darkgray);
+}
 
 #quartz-body .callout[data-callout="quote"]
 > .callout-title > .callout-icon {
