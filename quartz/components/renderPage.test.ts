@@ -81,6 +81,76 @@ describe("renderTranscludes", () => {
     assert.ok(texts.includes("Target content"), "transcluded content should be inlined")
   })
 
+  test("rebases ordinary note and folder-note links into the embedding page", () => {
+    for (const source of ["people/team/profile", "people/team/index"] as FullSlug[]) {
+      const destination = "campaign/heroes" as FullSlug
+      const target = "people/team/member"
+      const link: Element = {
+        type: "element",
+        tagName: "a",
+        properties: {
+          href: "../../people/team/member#overview",
+          "data-slug": target,
+        },
+        children: [{ type: "text", value: "Member" }],
+      }
+      const original = JSON.stringify(link)
+      const root: Root = { type: "root", children: [makeTranscludeBlockquote(source)] }
+      const sourceAst: Root = {
+        type: "root",
+        children: [{ type: "element", tagName: "p", properties: {}, children: [link] }],
+      }
+
+      renderTranscludes(
+        root,
+        cfg,
+        destination,
+        makeComponentData([makePageData(source, sourceAst)]) as QuartzComponentProps,
+        new Set<FullSlug>([destination]),
+      )
+
+      const block = root.children[0] as Element
+      const paragraph = block.children[1] as Element
+      const embeddedLink = paragraph.children[0] as Element
+      const resolved = new URL(
+        embeddedLink.properties.href as string,
+        "https://example.org/project/campaign/heroes",
+      )
+      assert.equal(resolved.pathname, "/project/people/team/member")
+      assert.equal(resolved.hash, "#overview")
+      assert.equal(embeddedLink.properties["data-slug"], target)
+      assert.equal(JSON.stringify(link), original, "source link must remain unchanged")
+    }
+  })
+
+  test("rebases relative embedded resources without rewriting absolute URLs", () => {
+    const source = "notes/collection/index" as FullSlug
+    const destination = "landing/page" as FullSlug
+    const sourceAst: Root = {
+      type: "root",
+      children: [{
+        type: "element",
+        tagName: "p",
+        properties: {},
+        children: [
+          { type: "element", tagName: "img", properties: { src: "./diagram.png" }, children: [] },
+          { type: "element", tagName: "a", properties: { href: "https://example.net/" }, children: [{ type: "text", value: "External" }] },
+        ],
+      }],
+    }
+    const root: Root = { type: "root", children: [makeTranscludeBlockquote(source)] }
+    renderTranscludes(
+      root, cfg, destination,
+      makeComponentData([makePageData(source, sourceAst)]) as QuartzComponentProps,
+      new Set<FullSlug>([destination]),
+    )
+    const paragraph = (root.children[0] as Element).children[1] as Element
+    const image = paragraph.children[0] as Element
+    const external = paragraph.children[1] as Element
+    assert.equal(new URL(image.properties.src as string, "https://example.org/project/landing/page").pathname, "/project/notes/collection/diagram.png")
+    assert.equal(external.properties.href, "https://example.net/")
+  })
+
   test("allows the same page to be embedded twice as siblings", () => {
     const root: Root = {
       type: "root",

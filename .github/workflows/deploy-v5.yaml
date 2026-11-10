@@ -60,6 +60,9 @@ jobs:
       - name: Validate and extract ITS settings
         run: node scripts/compile-wiki-theme.mjs
 
+      - name: Test transclusion rendering
+        run: npx tsx --test quartz/components/renderPage.test.ts
+
       - name: Build Wiki
         run: npx quartz build -d content -v
 

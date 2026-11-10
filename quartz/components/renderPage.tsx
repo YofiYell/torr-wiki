@@ -7,7 +7,7 @@ import {
   JSResourceToScriptElement,
   StaticResources,
 } from "../util/resources"
-import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import { FullSlug, RelativeURL, joinSegments, resolveRelative } from "../util/path"
 import { clone } from "../util/clone"
 import { Root, Element, ElementContent } from "hast"
 import { GlobalConfiguration, SidebarModes } from "../cfg"
@@ -138,6 +138,40 @@ export function pageResources(
   return resources
 }
 
+/**
+ * Links in parsed Markdown are relative to the source file's URL (including
+ * the "index" filename of folder notes), not to its simplified public slug.
+ * Resolve against that source file first, then make the result relative to the
+ * page receiving the transclusion. This also handles nested embeddings: each
+ * transclusion reuses its immediate source context.
+ */
+function rebaseEmbeddedElement<T extends Element>(
+  sourceElement: T,
+  destination: FullSlug,
+  source: FullSlug,
+): T {
+  const element = clone(sourceElement) as T
+  const sourceUrl = new URL(source, "https://quartz.invalid/")
+
+  function rewrite(node: Element) {
+    for (const attr of ["href", "src"] as const) {
+      const value = node.properties?.[attr]
+      if (typeof value !== "string" || !/^\.\.?($|\/)/.test(value)) continue
+
+      const target = new URL(value, sourceUrl)
+      const targetSlug = decodeURI(target.pathname.slice(1)) as FullSlug
+      node.properties[attr] =
+        resolveRelative(destination, targetSlug) + target.search + target.hash
+    }
+    for (const child of node.children) {
+      if (child.type === "element") rewrite(child)
+    }
+  }
+
+  rewrite(element)
+  return element
+}
+
 /** @internal Exported for testing only. */
 export function renderTranscludes(
   root: Root,
@@ -225,7 +259,7 @@ export function renderTranscludes(
           }
 
           el.children = [
-            normalizeHastElement(blockNode, slug, transcludeTarget),
+            rebaseEmbeddedElement(blockNode, slug, transcludeTarget),
             {
               type: "element",
               tagName: "a",
@@ -267,7 +301,7 @@ export function renderTranscludes(
 
         el.children = [
           ...(page.htmlAst.children.slice(startIdx, endIdx) as ElementContent[]).map((c) =>
-            normalizeHastElement(c as Element, slug, transcludeTarget),
+            rebaseEmbeddedElement(c as Element, slug, transcludeTarget),
           ),
           {
             type: "element",
@@ -300,7 +334,7 @@ export function renderTranscludes(
             ],
           },
           ...(page.htmlAst.children as ElementContent[]).map((c) =>
-            normalizeHastElement(c as Element, slug, transcludeTarget),
+            rebaseEmbeddedElement(c as Element, slug, transcludeTarget),
           ),
           {
             type: "element",
