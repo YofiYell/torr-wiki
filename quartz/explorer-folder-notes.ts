@@ -104,6 +104,10 @@ export function patchExplorerFolderNotes(layout: QuartzLayout): void {
       ),
     )
     console.error("[Explorer folder-note debug]", JSON.stringify(slots).slice(0, 9000))
+    const explorer = [...components].find((c) => c.name === "ExplorerComponent")
+    if (explorer && typeof explorer.afterDOMLoaded === "string") {
+      console.error("[Explorer runtime JS]", explorer.afterDOMLoaded.slice(0, 9000))
+    }
     throw new Error(`Explorer folder-note patch: expected one Explorer component, found ${patched}`)
   }
   console.log("[Explorer] Folder-note routing patched (Markdown > Base > folder listing).")
