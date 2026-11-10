@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-10T01:15:32.443Z
-modified: 2026-11-10T20:48:31.540Z
-published: 2026-11-10T20:48:31.540Z
+modified: 2026-11-10T22:02:05.061Z
+published: 2026-11-10T22:02:05.061Z
 unlisted: true
 quartz_asset: css
 ---
@@ -115,7 +115,7 @@ quartz_asset: css
     background-color: color-mix(
         in srgb,
         var(--light) 75%,
-        var(--secondary) 25%
+        var(--dark) 25%
     );
 
     border-left: 4px solid var(--darkgray);
