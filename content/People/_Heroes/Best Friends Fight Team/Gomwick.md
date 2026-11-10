@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T10:51:24.379Z
-modified: 2026-11-10T01:25:16.664Z
-published: 2026-11-10T01:25:16.664Z
+modified: 2026-11-10T01:38:40.871Z
+published: 2026-11-10T01:38:40.871Z
 tags:
   - dnd-character
   - orc
@@ -39,7 +39,7 @@ cha: 13
 
 > [!char]- Character Sheet
 >
-> <iframe src="https://www.dndbeyond.com/characters/163598337" style="width: 100%; height: 1000px; border: none;"></iframe>
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/163598337" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
 > [!quote] Character Quote or Epithet
 > _"I didn't ask what was in the crypt, I asked how much it pays."_

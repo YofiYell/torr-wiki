@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T11:09:04.274Z
-modified: 2026-11-10T01:25:22.903Z
-published: 2026-11-10T01:25:22.903Z
+modified: 2026-11-10T01:38:11.874Z
+published: 2026-11-10T01:38:11.874Z
 tags:
   - dnd-character
   - owlin
@@ -39,7 +39,7 @@ cha: 12
 
 > [!char]- Character Sheet
 >
-> <iframe src="https://www.dndbeyond.com/characters/164789231" style="width: 100%; height: 1000px; border: none;"></iframe>
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164789231" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
 > [!quote] Character Quote or Epithet
 > _"I didn't ask what was in the crypt, I asked how much it pays."_

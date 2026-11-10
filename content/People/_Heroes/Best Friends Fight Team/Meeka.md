@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T10:57:04.977Z
-modified: 2026-11-10T01:35:24.175Z
-published: 2026-11-10T01:35:24.175Z
+modified: 2026-11-10T01:37:12.214Z
+published: 2026-11-10T01:37:12.214Z
 tags:
   - dnd-character
   - pugilist

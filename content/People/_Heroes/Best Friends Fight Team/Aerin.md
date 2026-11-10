@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T11:10:20.810Z
-modified: 2026-11-09T12:53:58.870Z
-published: 2026-11-09T12:53:58.870Z
+modified: 2026-11-10T01:39:07.945Z
+published: 2026-11-10T01:39:07.945Z
 tags:
   - dnd-character
   - elf
@@ -40,7 +40,7 @@ cha: 14
 
 > [!char]- Character Sheet
 >
-> <iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe>
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164811578" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
 > [!quote] Character Quote or Epithet
 > _"I didn't ask what was in the crypt, I asked how much it pays."_
