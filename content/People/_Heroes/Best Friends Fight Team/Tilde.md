@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T05:31:06.828Z
-modified: 2026-11-10T03:22:06.957Z
-published: 2026-11-10T03:22:06.957Z
+modified: 2026-11-10T05:38:02.409Z
+published: 2026-11-10T05:38:02.409Z
 tags:
   - dnd-character
   - owlin
@@ -39,39 +39,41 @@ cha: 12
 ---
 
 > [!char]- Character Sheet
-
-<div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164789231" style="width: 100%; height: 1000px; border: none;"></iframe></div>
-
-> [!quote] Character Quote or Epithet
-> _"I didn't ask what was in the crypt, I asked how much it pays."_
+>
+> <div style="overflow: hidden;"><iframe src="https://www.dndbeyond.com/characters/164789231" style="width: 100%; height: 1000px; border: none;"></iframe></div>
 
 ## Overview
 
-## Appearance & Mannerisms
+> [!tip]
+> First impressions. A paragraph or so. Broad strokes. Use **landmark**,  - hidden, and _secret_ formatting
 
-- **First Impression:**
-- **Mannerisms & Speech:**
-- **Signature Item:**
+---
 
-## Background & Roots
+> [!cite] Quote/ Epithet
+> _" "_
+
+### Appearance
+
+### Personality
+
+What's the impression they give off when interacting with others?
+
+### Background
 
 - Born and raised in ...
 - Former associate of ...
 - The pivotal event that caused them to leave home: ...
 
-## Motivations & Beliefs
+### Morals & Values
 
-- **The Drive:**
-- **Core Value:**
-- **Flaw / Blind Spot:**
+How do they make choices and why?
 
-## Key Relationships
+### Livelihood
 
-- **Party Ties:**
-- **World Ties:**
+How do they make their living? How do they support themselves day to day? On whom or what do they depend?
 
-## Major Marks on the World
+### Connections:
 
-- > \[!example]- Character Sheet
+To what persons or groups are they affiliated and in what ways?
 
-> <iframe src="https://www.dndbeyond.com/characters/164789231"; style: width=100%; height=1000px;></iframe>
+---

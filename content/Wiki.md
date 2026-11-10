@@ -3,19 +3,22 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T05:14:04.382Z
-published: 2026-11-10T05:14:04.382Z
+modified: 2026-11-10T08:19:34.167Z
+published: 2026-11-10T08:19:34.167Z
 ---
 
 # World of Torr Wiki Home
 
 - **\_Build**
+  - [[Controls]]
   - [[Styles]]
+  - [[Theme]]
 - **Campaign**
   - **Quests**
     - **Completed**
       - [[Get Milli to Safety]]
       - [[Survive the Labyrinth]]
+      - [[Vigilantes No More]]
     - [[Investigate the "Elder Sun"]]
     - [[Quests.base|Quests]]
   - **Sessions**
@@ -26,7 +29,6 @@ published: 2026-11-10T05:14:04.382Z
     - [[Session 5]]
     - [[Session 6]]
   - [[Almanac]]
-  - [[Best Friends Fight Team]]
   - [[Heroes]]
   - [[Party Connections]]
 - **Encyclopedia**
@@ -35,15 +37,15 @@ published: 2026-11-10T05:14:04.382Z
     - [[Eldian]]
     - [[Elivandran]]
     - [[Nimarassi]]
-  - **Deities & Religions**
   - **Faiths & Mythology**
-    - **Gods**
+    - **Deities**
       - [[Cor]]
       - [[Encor]]
     - [[Circle of Blessed Renewal]]
     - [[Corish (Person)]]
     - [[Corism]]
     - [[Great Tree]]
+    - [[Sun Scrolls]]
     - [[White Stag]]
   - **Flora & Fauna**
     - [[Buckberries]]
@@ -71,7 +73,6 @@ published: 2026-11-10T05:14:04.382Z
 - **Homebrew**
   - [[Circle of Overgrowth]]
   - [[Homebrew.base|Homebrew]]
-- **Maps**
 - **People**
   - **\_Heroes**
     - **[[Best Friends Fight Team]]**
@@ -81,8 +82,10 @@ published: 2026-11-10T05:14:04.382Z
       - [[Meeka]]
       - [[Tilde]]
     - [[_Heroes.base|_Heroes]]
+  - **Heroes**
   - **z\_Minor**
     - [[Balthus Salazin]]
+    - [[Edom Elster]]
     - [[Garthri Ironhand]]
     - [[Libera]]
     - [[Madam Valentine]]
@@ -97,7 +100,6 @@ published: 2026-11-10T05:14:04.382Z
   - [[Calwen Wrencall]]
   - [[Cheziré Thessaly]]
   - [[Cornelius Gerhardt]]
-  - [[Edom Elster]]
   - [[Gerhardt the Gold]]
   - [[Ilovia]]
   - [[Ragall the Red]]
@@ -132,4 +134,3 @@ published: 2026-11-10T05:14:04.382Z
   - [[Sisters of Quorilith]]
 - **Solar System**
 - **z\_Attachments**
-- [[Homebrew.base|Homebrew]]

@@ -1,7 +1,7 @@
 filters:
   and:
     - file.folder.contains("People/_Heroes/")
-    - party == link("Wiki/People/_Heroes/Best Friends Fight Team/Best Friends Fight Team")
+    - party == link("Best Friends Fight Team")
 formulas:
   Age: |+
     586-number(birth_year_GG)

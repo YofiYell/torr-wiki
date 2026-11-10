@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-10-30T02:56:54.000Z
-modified: 2026-11-09T05:31:05.846Z
-published: 2026-11-09T05:31:05.846Z
+modified: 2026-11-10T06:37:28.068Z
+published: 2026-11-10T06:37:28.068Z
 srd_origin: homebrew
 brew_type: creature
 creature_type: beast
@@ -39,7 +39,7 @@ actions:
   - name: Kick
     desc: "*Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d8 + 2) bludgeoning damage."
 source: Homebrew
-layout: Basic 5e Layout
+layout: Basic 
 ```
 
 ## BASIC INFORMATION

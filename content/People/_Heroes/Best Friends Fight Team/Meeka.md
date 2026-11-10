@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T05:31:06.835Z
-modified: 2026-11-10T04:23:35.703Z
-published: 2026-11-10T04:23:35.703Z
+modified: 2026-11-10T05:37:20.594Z
+published: 2026-11-10T05:37:20.594Z
 tags:
   - dnd-character
   - pugilist
@@ -47,8 +47,24 @@ cha: 10
 
 ## Overview
 
-> [!tip]
-> First impressions. A paragraph or so. Broad strokes. Use **landmark**,  - hidden, and _secret_ formatting
+Found by captain [[Otto Brandis]]'s patrol company at age 14 in 580 GG on the outskirts of [[New Calaban]]. Surprised to find him only half-dead, unlike his companions in the [[corpse pit]] where he had been dumped.
+
+Organized street kids to take care of street dogs. Checks in on them daily. He's pretty well known by the street kids.
+
+[[Wala]] - best friend. Wererat. Came up with the name "Stray from the Southern March"
+
+likes to work out
+
+Victorious in a qualifier in an undercity tournament to qualify for the overcity tournament. (Should be a long way off)
+
+Amnesia
+
+Experiment
+
+14 when found by Otto Brandis in the thing. Made to fight dogs. Killed a (Lot) of dogs, but only remembers one. That's his first recent memory.
+
+Noticed by someone related to childhood because of the fact that he won the undercity tourney.
+[[Sisters of Quorilith]]
 
 ---
 
