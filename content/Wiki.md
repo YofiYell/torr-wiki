@@ -3,17 +3,12 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T10:13:04.520Z
-published: 2026-11-10T10:13:04.520Z
+modified: 2026-11-10T22:07:54.769Z
+published: 2026-11-10T22:07:54.769Z
 ---
 
 # World of Torr Wiki Home
 
-- **\_Build**
-  - [[.ignore]]
-  - [[Controls]]
-  - [[Styles]]
-  - [[Theme]]
 - **Campaign**
   - **Quests**
     - **Completed**

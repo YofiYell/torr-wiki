@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-10T01:15:32.443Z
-modified: 2026-11-10T22:02:05.061Z
-published: 2026-11-10T22:02:05.061Z
+modified: 2026-11-10T22:40:26.462Z
+published: 2026-11-10T22:40:26.462Z
 unlisted: true
 quartz_asset: css
 ---
@@ -69,7 +69,12 @@ quartz_asset: css
 ) {
     --color: var(--callout-color);
     --border: color-mix(in srgb, var(--callout-color) 27%, transparent);
-    --bg: color-mix(in srgb, var(--callout-color) 6%, transparent);
+
+    background-color: color-mix(
+        in oklch,
+        var(--callout-color) 10%,
+        transparent
+    );
 }
 
 /* Quartz: Treasure — Lucide Hand Coins */
@@ -102,6 +107,14 @@ quartz_asset: css
 /* Reminder */
 #quartz-body .callout[data-callout="reminder"] {
     --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/bell.svg");
+}
+
+/* ===== hide-dataview-first-col-count.md ===== */
+
+/* Hide the automatic row count in Dataview table headers */
+.dataview.table-view-table thead th:first-child .dataview-result-object-fold,
+.dataview-result-count {
+    display: none !important;
 }
 
 /* ===== quartz-ITS-quote-callout.md ===== */
