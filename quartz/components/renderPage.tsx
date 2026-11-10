@@ -163,7 +163,7 @@ function rebaseEmbeddedElement<T extends Element>(
       node.properties[attr] =
         resolveRelative(destination, targetSlug) + target.search + target.hash
     }
-    for (const child of node.children) {
+    for (const child of node.children ?? []) {
       if (child.type === "element") rewrite(child)
     }
   }
