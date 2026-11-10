@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-09T10:57:04.977Z
-modified: 2026-11-09T14:53:58.982Z
-published: 2026-11-09T14:53:58.982Z
+modified: 2026-11-10T01:21:55.350Z
+published: 2026-11-10T01:21:55.350Z
 tags:
   - dnd-character
   - therianthrope-(werebeast)-5.5e
@@ -45,7 +45,7 @@ cha: 10
 
 > [!char]- Character Sheet
 >
-> <iframe src="https://www.dndbeyond.com/characters/163719977" style="width: 100%; height: 1000px; border: none;"></iframe>
+> <iframe src="https://www.dndbeyond.com/characters/163719977" height="1000" style="width: 100%; border: none;"></iframe>
 
 > [!quote] Character Quote or Epithet
 > _"I didn't ask what was in the crypt, I asked how much it pays."_
