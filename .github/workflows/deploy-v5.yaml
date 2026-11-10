@@ -54,6 +54,9 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
 
+      - name: Compile published CSS
+        run: node scripts/compile-wiki-css.mjs
+
       - name: Build Wiki
         run: npx quartz build -d content -v
 

@@ -11,6 +11,7 @@ configuration:
     - private
     - templates
     - .obsidian
+    - _Build/**
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
