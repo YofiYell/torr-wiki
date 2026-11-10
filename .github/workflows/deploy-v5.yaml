@@ -57,6 +57,9 @@ jobs:
       - name: Compile published CSS
         run: node scripts/compile-wiki-css.mjs
 
+      - name: Validate and extract ITS settings
+        run: node scripts/compile-wiki-theme.mjs
+
       - name: Build Wiki
         run: npx quartz build -d content -v
 

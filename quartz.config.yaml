@@ -98,10 +98,11 @@ plugins:
   - source: "@quartz-community/quartz-fonts"
     enabled: true
   - source: "@quartz-themes/core"
-    enabled: false
+    enabled: true
     options:
-      theme: tokyo-night
+      theme: its-theme
       mode: both
+      styleSettings: quartz/generated-theme-settings.json
   - source: "@quartz-community/explicit-publish"
     enabled: false
   - source: "@quartz-community/alias-redirects"
