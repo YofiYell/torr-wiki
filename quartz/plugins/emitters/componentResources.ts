@@ -1,5 +1,5 @@
 import { createHash } from "crypto"
-import { FullSlug, joinSegments } from "../../util/path"
+import { FullSlug, joinSegments, slugifyFilePath } from "../../util/path"
 import { QuartzEmitterPlugin } from "../types"
 
 import { emitStaticAssets } from "./staticAssets"
@@ -342,7 +342,24 @@ export const ComponentResources: QuartzEmitterPlugin = () => {
       // that everyone else had the chance to register a listener for it
       // Adapt matching Obsidian Base folder notes in the existing Explorer DOM.
       // Install before addGlobalPageResources so the SPA router remains last.
-      componentResources.afterDOMLoaded.push(explorerFolderNotesScript)
+      // Only real source Markdown notes take precedence over a matching Base.
+      // Generated folder listings also look like index.md in contentIndex.json,
+      // so the browser must not infer Markdown folder notes from that index.
+      const realMarkdownFolderSlugs = [...new Set(
+        ctx.allFiles
+          .filter((fp) => fp.toLowerCase().endsWith(".md"))
+          .map((fp) => slugifyFilePath(fp))
+          .filter((slug) => slug.endsWith("/index")),
+      )]
+      const folderNotesScript = explorerFolderNotesScript.replace(
+        "__REAL_FOLDER_MD_SLUGS__",
+        JSON.stringify(realMarkdownFolderSlugs).replace(/</g, "\\u003c"),
+      )
+      if (folderNotesScript === explorerFolderNotesScript) {
+        throw new Error("Explorer folder-note script is missing its Markdown manifest placeholder")
+      }
+      componentResources.afterDOMLoaded.push(folderNotesScript)
+      console.log(`[Explorer] Found ${realMarkdownFolderSlugs.length} real Markdown folder notes`)
       addGlobalPageResources(ctx, componentResources)
 
       const useHashing = !ctx.argv.serve

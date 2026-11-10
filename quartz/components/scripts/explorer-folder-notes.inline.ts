@@ -11,18 +11,9 @@
     const folder = segments[segments.length - 2].toLowerCase();
     return name === folder + ".base";
   };
-  const hasMarkdownFolderNote = (entry, baseEntry) => {
-    if (!entry?.filePath || !baseEntry?.filePath) return false;
-    const baseSegments = parts(baseEntry.filePath);
-    const mdSegments = parts(entry.filePath);
-    if (baseSegments.length < 2 || mdSegments.length !== baseSegments.length) return false;
-    const baseFolder = baseSegments.slice(0, -1).join("/").toLowerCase();
-    const mdFolder = mdSegments.slice(0, -1).join("/").toLowerCase();
-    if (baseFolder !== mdFolder) return false;
-    const folderName = baseSegments[baseSegments.length - 2].toLowerCase();
-    const mdName = mdSegments[mdSegments.length - 1].toLowerCase();
-    return mdName === folderName + ".md" || mdName === "index.md" || mdName === "_index.md";
-  };
+  // Injected by Quartz at build time from real source Markdown filenames.
+  // Generated virtual folder-index pages must not count as Markdown folder notes.
+  const realMarkdownFolderSlugs = new Set(__REAL_FOLDER_MD_SLUGS__);
 
   const rootPath = () => (document.body?.dataset?.basepath || "").replace(/\/$/, "");
   let index = null;
@@ -35,7 +26,7 @@
       if (!folderSlug || !folderSlug.endsWith("/index")) continue;
       const baseSlug = folderSlug + ".base";
       const baseEntry = index[baseSlug];
-      if (!isMatchingBase(baseEntry) || hasMarkdownFolderNote(index[folderSlug], baseEntry)) continue;
+      if (!isMatchingBase(baseEntry) || realMarkdownFolderSlugs.has(folderSlug)) continue;
 
       const folderLink = folder.querySelector("a.folder-button");
       if (!folderLink) continue;
