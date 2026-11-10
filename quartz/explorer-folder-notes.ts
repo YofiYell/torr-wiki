@@ -83,6 +83,27 @@ export function patchExplorerFolderNotes(layout: QuartzLayout): void {
     patched++
   }
   if (patched !== 1) {
+    const slots = [layout.defaults, ...Object.values(layout.byPageType)].map((group) =>
+      Object.fromEntries(
+        Object.entries(group).filter(([, slot]) => Array.isArray(slot)).map(([key, slot]) => [
+          key,
+          (slot as QuartzComponent[]).map((component) => ({
+            name: component.displayName ?? component.name,
+            js: typeof component.afterDOMLoaded === "string"
+              ? component.afterDOMLoaded.length
+              : Array.isArray(component.afterDOMLoaded)
+                ? component.afterDOMLoaded.map((s) => s.length)
+                : "none",
+            hasAnchor: typeof component.afterDOMLoaded === "string"
+              ? component.afterDOMLoaded.includes(linkAnchor)
+              : Array.isArray(component.afterDOMLoaded)
+                ? component.afterDOMLoaded.some((s) => s.includes(linkAnchor))
+                : false,
+          })),
+        ]),
+      ),
+    )
+    console.error("[Explorer folder-note debug]", JSON.stringify(slots).slice(0, 9000))
     throw new Error(`Explorer folder-note patch: expected one Explorer component, found ${patched}`)
   }
   console.log("[Explorer] Folder-note routing patched (Markdown > Base > folder listing).")
