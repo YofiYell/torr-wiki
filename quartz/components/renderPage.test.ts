@@ -151,6 +151,118 @@ describe("renderTranscludes", () => {
     assert.equal(external.properties.href, "https://example.net/")
   })
 
+  test("renders embedded placeholders with their source metadata", () => {
+    const sourceSlug = "notes/collection/index" as FullSlug
+    const destination = "landing/overview" as FullSlug
+    const sourceHtml: Root = {
+      type: "root",
+      children: [
+        { type: "element", tagName: "div", properties: { dataQzBasesCodeblock: "0" }, children: [] },
+      ],
+    }
+    const source = makePageData(sourceSlug, sourceHtml, { basesBlocks: ["Collection entries"] })
+    const root: Root = { type: "root", children: [makeTranscludeBlockquote(sourceSlug)] }
+    const transform = (tree: Root, _slug: FullSlug, data: QuartzComponentProps) => {
+      const blocks = (data.fileData as unknown as { basesBlocks?: string[] }).basesBlocks ?? []
+      function visit(node: Root | Element) {
+        for (const child of node.children) {
+          if (child.type !== "element") continue
+          if (child.properties.dataQzBasesCodeblock !== undefined) {
+            const index = Number(child.properties.dataQzBasesCodeblock)
+            const label = blocks[index]
+            if (label !== undefined) {
+              child.properties = { className: ["bases-inline"], dataSource: data.fileData.slug }
+              child.children = [{ type: "text", value: label }]
+            }
+          }
+          visit(child)
+        }
+      }
+      visit(tree)
+    }
+
+    renderTranscludes(
+      root, cfg, destination,
+      makeComponentData([source]) as QuartzComponentProps,
+      new Set<FullSlug>([destination]),
+      [transform],
+    )
+    const rendered = JSON.stringify(root)
+    assert.ok(rendered.includes("Collection entries"))
+    assert.ok(rendered.includes("bases-inline"))
+    assert.ok(rendered.includes(sourceSlug))
+    assert.ok(!rendered.includes("dataQzBasesCodeblock"))
+    assert.equal(sourceHtml.children[0].type, "element")
+    assert.equal((sourceHtml.children[0] as Element).properties.dataQzBasesCodeblock, "0")
+  })
+
+  test("resolves multi-level embedded placeholders using each source's metadata", () => {
+    const parentSlug = "notes/collection/index" as FullSlug
+    const nestedSlug = "notes/detail/index" as FullSlug
+    const destination = "landing/overview" as FullSlug
+
+    const placeholder = (): Element => ({
+      type: "element", tagName: "div", properties: { dataQzBasesCodeblock: "0" }, children: [],
+    })
+    const parentHtml: Root = {
+      type: "root",
+      children: [placeholder(), makeTranscludeBlockquote(nestedSlug)],
+    }
+    const nestedHtml: Root = { type: "root", children: [placeholder()] }
+    const parent = makePageData(parentSlug, parentHtml, { basesBlocks: ["Collection entries"] })
+    const nested = makePageData(nestedSlug, nestedHtml, { basesBlocks: ["Detail entries"] })
+    const root: Root = { type: "root", children: [makeTranscludeBlockquote(parentSlug)] }
+
+    const transform = (tree: Root, _slug: FullSlug, data: QuartzComponentProps) => {
+      const blocks = (data.fileData as unknown as { basesBlocks?: string[] }).basesBlocks ?? []
+      const label = blocks[0]
+      function visit(node: Root | Element) {
+        for (const child of node.children) {
+          if (child.type !== "element") continue
+          if (child.properties.dataQzBasesCodeblock !== undefined && label) {
+            child.properties = { className: ["bases-inline"], dataSource: data.fileData.slug }
+            child.children = [
+              { type: "element", tagName: "a",
+                properties: { href: "./member" },
+                children: [{ type: "text", value: label }] },
+            ]
+          }
+          visit(child)
+        }
+      }
+      visit(tree)
+    }
+    renderTranscludes(
+      root, cfg, destination,
+      makeComponentData([parent, nested]) as QuartzComponentProps,
+      new Set<FullSlug>([destination]),
+      [transform],
+    )
+
+    const rendered = JSON.stringify(root)
+    for (const [slug, label] of [[parentSlug, "Collection entries"], [nestedSlug, "Detail entries"]]) {
+      assert.ok(rendered.includes(label), `missing ${label}`)
+      assert.ok(rendered.includes(slug), `missing source ${slug}`)
+    }
+    assert.ok(!rendered.includes("dataQzBasesCodeblock"), "all placeholders should be resolved")
+    const links: Element[] = []
+    function collect(node: Root | Element) {
+      for (const child of node.children) {
+        if (child.type !== "element") continue
+        if (child.tagName === "a" && child.children.some(c => c.type === "text" && c.value.endsWith("entries"))) {
+          links.push(child)
+        }
+        collect(child)
+      }
+    }
+    collect(root)
+    assert.equal(links.length, 2)
+    const paths = links.map((link) =>
+      new URL(link.properties.href as string, "https://example.org/project/landing/overview").pathname,
+    )
+    assert.deepEqual(paths.sort(), ["/project/notes/collection/member", "/project/notes/detail/member"])
+  })
+
   test("allows the same page to be embedded twice as siblings", () => {
     const root: Root = {
       type: "root",
