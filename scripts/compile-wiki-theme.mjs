@@ -40,7 +40,24 @@ for (const [key, value] of entries) {
     throw new Error(`${source}: invalid value for ${key}.`);
   }
 }
-const json = JSON.stringify(Object.fromEntries(entries.sort(([a], [b]) => a.localeCompare(b))), null, 2) + "\n";
+// Quartz Themes processes class toggles before class selects. ITS's original
+// stylesheet declares TTRPG variants before Drowned; preserve that order by
+// representing the selected TTRPG class as an active class for Quartz only.
+// Theme.md remains the unchanged, authoritative Style Settings export.
+const quartzSettings = { ...settings };
+const ttrpgClasses = new Set(["dnd", "wotc-beyond", "pathfinder", "pathfinder-remaster"]);
+const selectedTtrpg = quartzSettings["ITS@@select"];
+if (ttrpgClasses.has(selectedTtrpg)) {
+  const classKey = `ITS@@${selectedTtrpg}`;
+  if (Object.hasOwn(quartzSettings, classKey) && quartzSettings[classKey] !== true) {
+    throw new Error(`${source}: conflicting ITS style settings for ${classKey}.`);
+  }
+  delete quartzSettings["ITS@@select"];
+  quartzSettings[classKey] = true;
+  console.log(`Normalized ITS TTRPG class ${selectedTtrpg} to preserve native CSS precedence.`);
+}
+const quartzEntries = Object.entries(quartzSettings);
+const json = JSON.stringify(Object.fromEntries(quartzEntries.sort(([a], [b]) => a.localeCompare(b))), null, 2) + "\n";
 await mkdir(dirname(output), { recursive: true });
 const temporary = `${output}.${process.pid}.tmp`;
 try {
