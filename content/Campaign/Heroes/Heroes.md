@@ -1,10 +1,4 @@
----
-publish: true
-title: Best Friends Fight Team
-created: 2026-11-08T20:30:14.000Z
-modified: 2026-11-11T03:52:21.705Z
-published: 2026-11-11T03:52:21.705Z
----
+# Best Friends Fight Team
 
 ![[Heroes.base]]
 
