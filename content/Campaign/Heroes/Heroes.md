@@ -1,9 +1,10 @@
 ---
 publish: true
-permalink: Best Friends Fight Team
+aliases:
+  - Best Friends Fight Team
 created: 2026-11-08T20:30:14.000Z
-modified: 2026-11-11T17:43:18.881Z
-published: 2026-11-11T17:43:18.881Z
+modified: 2026-11-11T17:48:02.660Z
+published: 2026-11-11T17:48:02.660Z
 ---
 
 # Best Friends Fight Team
