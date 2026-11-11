@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-10-30T02:56:54.000Z
-modified: 2026-11-10T10:22:35.858Z
-published: 2026-11-10T10:22:35.858Z
+modified: 2026-11-11T04:48:35.659Z
+published: 2026-11-11T04:48:35.659Z
 srd_origin: homebrew
 brew_type: creature
 creature_type: beast
@@ -10,39 +10,15 @@ creature_type: beast
 
 Wild Kestrin are large, flightless birds native to [[Orun|Orun’s]] interior river valleys, serving as the primary mount, draft animal, and cavalry beast across the Eastern region. With their powerful legs and broad, webbed feet adapted for mud, gravel, and shallow water, kestrin excel where horses would fail—moving swiftly across broken terrain, leaping large distances, and carrying heavy loads over long periods. To the people of [[Eldia - Nation|Eldia]], a kestrin is not simply an animal—it is the foundation of travel, labor, and war.
 
-```statblock
-name: Wild Kestrin
-size: Large
-type: Beast
-alignment: Unaligned
-ac: 11
-hp: 19
-hit_dice: 3d10 + 3
-speed: 50 ft.
-stats:
-  - 15
-  - 12
-  - 13
-  - 4
-  - 13
-  - 5
-skillsaves:
-  - perception: 5
-senses: passive Perception 15
-cr: 1/4
-traits:
-  - name: River Runner
-    desc: The Kestrin ignores difficult terrain caused by mud, shallow water, or loose gravel.
-  - name: Giant Leap
-    desc: When the Kestrin has a running start, it triples the distance it can leap horizontally.
-actions:
-  - name: Kick
-    desc: "*Melee Weapon Attack:* +4 to hit, reach 5 ft., one target. *Hit:* 7 (1d8 + 2) bludgeoning damage."
-source: Homebrew
-layout: Basic 
-```
+> [!stat]- Statblock
+>
+> ```statblock
+> creature: Wild Kestrin
+> ```
 
 ## BASIC INFORMATION
+
+</br>
 
 ### Anatomy
 
@@ -51,7 +27,7 @@ While omnivorous, kestrin beaks are not well suited to securing prey. They prefe
 Kestrin are flightless, though their wings can aid in balancing when leaping large distances. Their webbed feet with coarse padding underneath allows them to traverse gravelly or muddy terrain with ease.
 The two long feathers that protrude from their crown are not merely for display. Though the colorful variants sported by males of the species are used for mating displays, their rachises are attached to sensory organs allowing them to detect vibrations and changes in air pressure. This same structure also allows finer communication between kestrin, and some say they can sense emotions.
 
-### Genetics and Reproduction
+### Genetics & Reproduction
 
 While hearty creatures, the kestrin population is fragile. Brooding mothers lay a single egg that takes 6 months to develop.
 Eggs take 6 months to fully develop, and are extremely sensitive to temperature. In their later stages, eggs must be carried to geothermal ground in order to fully mature, binding the kestrin life cycle to volcanic foothills and natural hot springs.

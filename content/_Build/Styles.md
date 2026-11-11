@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-10T01:15:32.443Z
-modified: 2026-11-11T04:23:56.955Z
-published: 2026-11-11T04:23:56.955Z
+modified: 2026-11-11T05:09:16.011Z
+published: 2026-11-11T05:09:16.011Z
 unlisted: true
 quartz_asset: css
 ---
@@ -35,8 +35,8 @@ quartz_asset: css
 /* STATBLOCK */
 
 .callout[data-callout="stat"] {
-    --callout-color: #cf2d21;
-    --callout-icon: lucide-file-digit;
+    --callout-color: #0077bb;
+    --callout-icon: lucide-table-properties;
 }
 
 /* RULE */
@@ -107,6 +107,19 @@ quartz_asset: css
 /* Reminder */
 #quartz-body .callout[data-callout="reminder"] {
     --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/bell.svg");
+}
+
+/* ===== dataviews.md ===== */
+
+/* Freeze the first column ONLY in tables wrapped in the frozen-cols class */
+.sticky-col table th:first-child,
+.sticky-col table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: var(--background-primary);
+    border-left: 4px solid;
+    border-color: var(--note);
 }
 
 /* ===== quartz-ITS-quote-callout.md ===== */
