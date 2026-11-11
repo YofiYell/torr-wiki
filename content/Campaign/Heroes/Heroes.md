@@ -1,3 +1,11 @@
+---
+publish: true
+permalink: Best Friends Fight Team
+created: 2026-11-08T20:30:14.000Z
+modified: 2026-11-11T17:43:18.881Z
+published: 2026-11-11T17:43:18.881Z
+---
+
 # Best Friends Fight Team
 
 ||**[[Aerin\|Aerin]]**|**[[Ash\|Ash]]**|**[[Gomwick\|Gomwick]]**|**[[Meeka\|Meeka]]**|**[[Tilde\|Tilde]]**|
