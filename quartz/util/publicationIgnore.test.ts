@@ -1,10 +1,36 @@
 import test, { describe } from "node:test"
 import assert from "node:assert/strict"
-import { isPublicationIgnored, parsePublicationIgnore } from "./publicationIgnore"
+import fs from "node:fs"
+import os from "node:os"
+import path from "node:path"
+import { isPublicationIgnored, loadPublicationIgnore, parsePublicationIgnore } from "./publicationIgnore"
 
 const fence = (rules: string) => "\x60\x60\x60txt\n" + rules + "\n\x60\x60\x60"
 
 describe("Wiki publication ignore rules", () => {
+  test("missing optional .ignore.md supplies no additional exclusions", () => {
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), "wiki-ignore-"))
+    try {
+      const missing = loadPublicationIgnore(root)
+      assert.deepEqual(missing, { rules: [] })
+      assert.equal(isPublicationIgnored(missing, "_Views/Private.base"), false)
+      assert.equal(isPublicationIgnored(missing, "Notes/Public.md"), false)
+
+      // An existing .ignore.md continues to work, and invalid contents
+      // must not silently disable intended exclusions.
+      fs.mkdirSync(path.join(root, "_Build"))
+      fs.writeFileSync(path.join(root, "_Build", ".ignore.md"), fence("_Views/"))
+      const enabled = loadPublicationIgnore(root)
+      assert.equal(isPublicationIgnored(enabled, "_Views/Private.base"), true)
+      assert.equal(isPublicationIgnored(enabled, "Notes/Public.md"), false)
+
+      fs.writeFileSync(path.join(root, "_Build", ".ignore.md"), "not a txt fence")
+      assert.throws(() => loadPublicationIgnore(root), /fenced txt/)
+    } finally {
+      fs.rmSync(root, { recursive: true, force: true })
+    }
+  })
+
   test("parses only txt fences, not surrounding Markdown or comments", () => {
     const settings = parsePublicationIgnore(
       "# Do not treat this heading as an ignore rule\n" +

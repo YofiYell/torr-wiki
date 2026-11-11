@@ -62,10 +62,21 @@ export function parsePublicationIgnore(markdown: string): PublicationIgnore {
   return { rules }
 }
 
-/** Read rules once per build; a missing or malformed manifest must fail the build. */
+/**
+ * Optional wiki-wide publication exclusions. A missing .ignore.md means
+ * no extra rules. An existing but malformed file still reports an error,
+ * rather than silently publishing material its author intended to exclude.
+ */
 export function loadPublicationIgnore(contentRoot: string): PublicationIgnore {
   const filename = path.join(contentRoot, "_Build", ".ignore.md")
-  return parsePublicationIgnore(fs.readFileSync(filename, "utf8"))
+  try {
+    return parsePublicationIgnore(fs.readFileSync(filename, "utf8"))
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return { rules: [] }
+    }
+    throw error
+  }
 }
 
 /**
