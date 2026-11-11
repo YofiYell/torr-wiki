@@ -81,6 +81,41 @@ describe("renderTranscludes", () => {
     assert.ok(texts.includes("Target content"), "transcluded content should be inlined")
   })
 
+  test("unpublished Base embeds remain visible without a broken source-page link", () => {
+    const sourceSlug = "collection/private.base" as FullSlug
+    const destination = "notes/overview" as FullSlug
+    const source: Root = {
+      type: "root",
+      children: [{
+        type: "element", tagName: "p", properties: {},
+        children: [{ type: "text", value: "Embedded Base table" }],
+      }],
+    }
+    const file = makePageData(sourceSlug, source, {
+      relativePath: "collection/private.base",
+    })
+    const data = {
+      ...makeComponentData([file]),
+      ctx: {
+        publicationIgnore: {
+          rules: [{ pattern: "private.base", negated: false, directoryOnly: false, matchBase: true }],
+        },
+      },
+    } as QuartzComponentProps
+    const root: Root = { type: "root", children: [makeTranscludeBlockquote(sourceSlug)] }
+
+    renderTranscludes(root, cfg, destination, data, new Set([destination]))
+    const transcluded = root.children[0] as Element
+    const content = JSON.stringify(transcluded)
+    assert.ok(content.includes("Embedded Base table"), "Base content must remain embeddable")
+    assert.ok(!content.includes("transclude-src"), "unpublished source must not link to a 404")
+
+    data.ctx.publicationIgnore = { rules: [] }
+    const publicRoot: Root = { type: "root", children: [makeTranscludeBlockquote(sourceSlug)] }
+    renderTranscludes(publicRoot, cfg, destination, data, new Set([destination]))
+    assert.ok(JSON.stringify(publicRoot).includes("transclude-src"), "ordinary embeds retain source links")
+  })
+
   test("rebases ordinary note and folder-note links into the embedding page", () => {
     for (const source of ["people/team/profile", "people/team/index"] as FullSlug[]) {
       const destination = "campaign/heroes" as FullSlug

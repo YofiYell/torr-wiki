@@ -327,7 +327,7 @@ export function renderTranscludes(
           // A hidden Base may render inside a published note, but must not
           // advertise a standalone URL that the publisher deliberately omits.
           ...(
-            isPublicationIgnored(componentData.ctx.publicationIgnore, page.relativePath ?? "")
+            isPublicationIgnored(componentData.ctx?.publicationIgnore, page.relativePath ?? "")
               ? []
               : [{
                   type: "element" as const,
