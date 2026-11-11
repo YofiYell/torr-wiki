@@ -70,7 +70,7 @@ jobs:
         run: npx tsx --test quartz/plugins/transformers/statblocks.test.ts
 
       - name: Test Markdown table parity
-        run: npx tsx --test quartz/styles/markdownTables.test.ts
+        run: npx tsx --test quartz/styles/markdownTables.test.ts quartz/plugins/transformers/tableCellLists.test.ts
 
       - name: Build Wiki
         run: npx quartz build -d content -v

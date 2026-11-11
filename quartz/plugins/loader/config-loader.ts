@@ -43,6 +43,7 @@ import {
 } from "./capabilities"
 import { absorbingBuiltin, BuiltinPlan, instantiateBuiltins, planBuiltins } from "../builtins"
 import { Statblocks } from "../transformers/statblocks"
+import { TableCellLists } from "../transformers/tableCellLists"
 import { registerPluginOrigin, reportError, warn } from "../../util/diagnostics"
 import { firstPluginFrame } from "../../util/trace"
 import {
@@ -714,6 +715,9 @@ export async function loadQuartzConfig(
         instantiateBuiltins(builtinPlan, "transformer"),
         await instantiate(transformers, "transformer"),
       ),
+      // After GFM + Obsidian HTML transforms, turn hyphen/<br> table
+      // entries into semantic list items without touching source Markdown.
+      TableCellLists(),
     ],
     filters: withBuiltins(
       instantiateBuiltins(builtinPlan, "filter"),

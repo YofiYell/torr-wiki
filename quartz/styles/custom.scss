@@ -275,6 +275,17 @@
     line-height: 1.25;
     font-family: var(--font-text, var(--bodyFont));
 
+    // ITS uses a translucent --td tint on both axes. Distinct row and
+    // column strengths produce four intersections instead of flat stripes.
+    --qz-table-surface: var(--table-row-background, var(--note, var(--light)));
+    --qz-table-column-shade: var(--table-column-alt-background, var(--td, var(--highlight)));
+    --qz-table-row-shade: var(--table-row-alt-background, var(--td, var(--highlight)));
+    --qz-table-header-surface: var(
+      --qz-table-header-bg,
+      var(--embed-bg, var(--table-header-background, var(--th, var(--light))))
+    );
+    background-color: var(--qz-table-surface);
+
     > thead,
     > tbody {
       line-height: inherit;
@@ -292,10 +303,7 @@
     > thead > tr > th {
       // The ITS Dataview-like header uses the dark embed surface; theme
       // and Style Settings can override it with --qz-table-header-bg.
-      background-color: var(
-        --qz-table-header-bg,
-        var(--embed-bg, var(--table-header-background, var(--light)))
-      );
+      background-color: var(--qz-table-header-surface);
       color: var(--table-header-text-color, var(--headers, var(--secondary)));
       font-family: var(--font, var(--headerFont));
       font-size: var(--table-header-size, 1rem);
@@ -307,20 +315,48 @@
       border-bottom: 2px solid var(--accent, var(--tertiary));
     }
 
+    // Descendant <strong> and <a> have their own body/link fonts in ITS.
+    // Reset only their font family; the author's ** still controls bold.
+    > thead > tr > th :is(strong, a.internal, a.internal-link) {
+      font-family: inherit;
+    }
+
+    > thead > tr > th:nth-child(even) {
+      background-color: color-mix(
+        in srgb,
+        var(--qz-table-header-surface) 82%,
+        var(--note, var(--light)) 18%
+      );
+    }
+
+    > thead > tr > th:first-child:empty {
+      background-color: var(--qz-table-surface);
+      border-bottom-color: transparent;
+    }
+
+    > tbody {
+      background-color: var(--qz-table-surface);
+    }
+
+    > tbody > tr {
+      background-color: transparent;
+    }
+
+    > tbody > tr:nth-child(even) {
+      background-color: color-mix(in srgb, var(--qz-table-row-shade) 75%, transparent);
+    }
+
     > tbody > tr > td {
       padding: var(--table-cell-padding-y, 0.15rem)
         var(--table-cell-padding-x, 0.42rem);
-      background-color: var(--table-row-background, var(--note, var(--light)));
+      background-color: transparent;
       color: var(--text-normal, var(--darkgray));
       font-size: var(--table-text-size, 0.94rem);
       line-height: 1.3;
     }
 
-    > tbody > tr:nth-child(even) > td {
-      background-color: var(
-        --table-row-alt-background,
-        var(--td, var(--highlight))
-      );
+    > tbody > tr > td:nth-child(odd) {
+      background-color: var(--qz-table-column-shade);
     }
 
     // Ordinary Quartz internal-link badges do not exist in ITS tables.
@@ -333,6 +369,45 @@
       padding: 0;
       font-weight: inherit;
       line-height: inherit;
+    }
+
+    // Table Markdown "- [[person]]<br>- [[person]]" becomes semantic
+    // list items at build time. Use ITS's tiny diamond shape and marker hues.
+    > tbody > tr > td ul.qz-table-diamond-list {
+      display: block;
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 1rem;
+    }
+
+    > tbody > tr > td ul.qz-table-diamond-list > li {
+      position: relative;
+      display: list-item;
+      list-style: none;
+      margin: 0.08rem 0;
+      padding: 0;
+      line-height: inherit;
+    }
+
+    > tbody > tr > td ul.qz-table-diamond-list > li::before {
+      content: "";
+      display: block;
+      position: absolute;
+      inset-inline-start: -0.78rem;
+      top: 0.53em;
+      width: var(--list-bullet-size, 0.35rem);
+      height: var(--list-bullet-size, 0.35rem);
+      margin: 0;
+      border-radius: var(--list-bullet-radius, 0);
+      transform: var(--list-bullet-transform, rotate(45deg));
+      background-color: var(--list-marker-color, var(--accent, var(--tertiary)));
+    }
+
+    > tbody > tr > td ul.qz-table-diamond-list > li:nth-child(even)::before {
+      background-color: var(
+        --list-marker-color-alt,
+        var(--accent2, var(--secondary))
+      );
     }
   }
 }
