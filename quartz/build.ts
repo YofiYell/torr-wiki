@@ -23,6 +23,7 @@ import { getStaticResourcesFromPlugins } from "./plugins"
 import { randomIdNonSecure } from "./util/random"
 import { ChangeEvent } from "./plugins/types"
 import { minimatch } from "minimatch"
+import { isPublicationIgnored, loadPublicationIgnore } from "./util/publicationIgnore"
 import { formatLayoutReport, getLayoutReport } from "./plugins/loader/layoutReport"
 import { getBuiltinPlan } from "./plugins/loader/config-loader"
 import { prepareContentIndex } from "./plugins/builtins/contentIndex"
@@ -101,6 +102,7 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
     allFiles: [],
     incremental: false,
     virtualPages: [],
+    publicationIgnore: loadPublicationIgnore(argv.directory),
   }
 
   const perf = new PerfTimer()
@@ -148,7 +150,11 @@ async function buildQuartz(argv: Argv, mut: Mutex, clientRefresh: () => void) {
   console.log(`Cleaned output directory \`${output}\` in ${perf.timeSince("clean")}`)
 
   perf.addEvent("glob")
-  const allFiles = await glob("**/*.*", argv.directory, cfg.configuration.ignorePatterns)
+  const discovered = await glob("**/*.*", argv.directory, cfg.configuration.ignorePatterns)
+  // An unpublished Base remains an input so its views can be embedded in public notes.
+  const allFiles = discovered.filter((fp) =>
+    !isPublicationIgnored(ctx.publicationIgnore, fp) || fp.endsWith(".base"),
+  )
   const markdownPaths = allFiles.filter((fp) => fp.endsWith(".md")).sort()
   console.log(
     `Found ${markdownPaths.length} input files from \`${argv.directory}\` in ${perf.timeSince("glob")}`,
@@ -213,6 +219,7 @@ async function startWatching(
     ignored: (fp) => {
       const pathStr = toPosixPath(fp.toString())
       if (pathStr.startsWith(".git/")) return true
+      if (isPublicationIgnored(ctx.publicationIgnore, pathStr) && !pathStr.endsWith(".base")) return true
       if (gitIgnoredMatcher(pathStr)) return true
       for (const pattern of cfg.configuration.ignorePatterns) {
         if (minimatch(pathStr, pattern)) {
@@ -295,7 +302,9 @@ async function startWatching(
       scanInProgress = true
       try {
         const scannedFiles = await glob("**/*.*", argv.directory, cfg.configuration.ignorePatterns)
-        const currentFiles = new Set(scannedFiles)
+        const currentFiles = new Set(scannedFiles.filter((fp) =>
+          !isPublicationIgnored(ctx.publicationIgnore, fp) || fp.endsWith(".base"),
+        ))
         const { added, deleted } = diffContentFiles(knownFiles, currentFiles)
 
         for (const fp of added) {

@@ -3,6 +3,7 @@ import { ProcessedContent, QuartzPluginData } from "../plugins/vfile"
 import { FileTrieNode } from "./fileTrie"
 import type { ContentDetails } from "../plugins/types"
 import { FilePath, FullSlug, slugifyFilePath } from "./path"
+import type { PublicationIgnore } from "./publicationIgnore"
 
 export interface Argv {
   directory: string
@@ -35,6 +36,8 @@ export interface BuildCtx {
   cfg: QuartzConfig
   allSlugs: FullSlug[]
   allFiles: FilePath[]
+  /** Source-path publication exclusions; the renderer still sees ignored .base definitions. */
+  publicationIgnore?: PublicationIgnore
   /**
    * Frontmatter permalinks: content file (relative path) → the slug it is published at
    * (Obsidian Publish semantics, see util/permalinks.ts). Plain data, so it reaches worker threads.

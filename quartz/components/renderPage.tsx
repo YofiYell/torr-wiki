@@ -16,6 +16,7 @@ import { styleText } from "util"
 import { resolveFrame } from "./frames"
 import type { TreeTransform } from "../plugins/types"
 import type { BuildCtx } from "../util/ctx"
+import { isPublicationIgnored } from "../util/publicationIgnore"
 
 interface RenderComponents {
   head: QuartzComponent
@@ -323,17 +324,24 @@ export function renderTranscludes(
         if (!content) continue
         el.children = [
           ...renderSource(content, page, sourceSlug),
-          {
-            type: "element",
-            tagName: "a",
-            properties: {
-              href: inner.properties?.href,
-              class: ["internal", "internal-link", "transclude-src"],
-            },
-            children: [
-              { type: "text", value: i18n(cfg.locale).components.transcludes.linkToOriginal },
-            ],
-          },
+          // A hidden Base may render inside a published note, but must not
+          // advertise a standalone URL that the publisher deliberately omits.
+          ...(
+            isPublicationIgnored(componentData.ctx.publicationIgnore, page.relativePath ?? "")
+              ? []
+              : [{
+                  type: "element" as const,
+                  tagName: "a",
+                  properties: {
+                    href: inner.properties?.href,
+                    class: ["internal", "internal-link", "transclude-src"],
+                  },
+                  children: [{
+                    type: "text" as const,
+                    value: i18n(cfg.locale).components.transcludes.linkToOriginal,
+                  }],
+                }]
+          ),
         ]
       } finally {
         visited.delete(transcludeTarget)

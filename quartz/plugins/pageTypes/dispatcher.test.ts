@@ -316,6 +316,48 @@ describe("folders of virtual pages (#2576)", () => {
     assert.deepStrictEqual(seen, ["trips/map.base"])
   })
 
+  test("excluded Base files remain embeddable but are absent from public navigation", async () => {
+    const ctx = makeCtx()
+    ctx.publicationIgnore = {
+      rules: [{ pattern: "_ViewData", negated: false, directoryOnly: true, matchBase: true }],
+    }
+    let visibleToFolderGenerator: string[] = []
+    const entries = await generateVirtualPages(
+      [
+        makePageType({
+          name: "bases",
+          fileExtensions: [".base"],
+          generate: () => [
+            { ...page("_ViewData/private.base"), data: { relativePath: "_ViewData/private.base" as FilePath } },
+            { ...page("public/available.base"), data: { relativePath: "public/available.base" as FilePath } },
+          ],
+        }),
+        makePageType({
+          name: "folders",
+          generate: ({ ctx }) => {
+            visibleToFolderGenerator = ctx.virtualPages.map(([, file]) => file.data.slug!)
+            return []
+          },
+        }),
+      ],
+      [],
+      ctx,
+      { head: StubHead },
+      {},
+    )
+    assert.strictEqual(entries.length, 2, "unpublished Base still needs an AST for embeds")
+    assert.strictEqual(entries[0].excludedFromPublication, true)
+    assert.strictEqual(entries[1].excludedFromPublication, false)
+    assert.deepStrictEqual(visibleToFolderGenerator, ["public/available.base"])
+    assert.deepStrictEqual(ctx.virtualPages.map(([, file]) => file.data.slug), ["public/available.base"])
+    const trie = folderTrie([], entries)
+    assert.strictEqual(trie.findNode(["_ViewData", "index"]), undefined)
+    assert.deepStrictEqual(
+      trie.findNode(["public", "index"])?.children.map((child) => child.slug),
+      ["public/available.base"],
+    )
+  })
+
   test("only pages of page types that render files are file-backed", async () => {
     const entries = await generateVirtualPages(
       [

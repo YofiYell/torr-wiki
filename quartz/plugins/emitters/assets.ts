@@ -6,9 +6,9 @@ import fs from "fs"
 import { glob } from "../../util/glob"
 import { Argv, BuildCtx } from "../../util/ctx"
 import { unreadableFileError } from "../../util/pluginErrors"
-import { QuartzConfig } from "../../cfg"
 import { visit } from "unist-util-visit"
 import { Element } from "hast"
+import { isPublicationIgnored } from "../../util/publicationIgnore"
 
 function getPageTypeExtensions(ctx: BuildCtx): Set<string> {
   const extensions = new Set<string>()
@@ -83,12 +83,15 @@ function isReferenced(references: Set<string>, fp: string): boolean {
   return references.has(normalizeAssetPath(fp)) || references.has(slugifyFilePath(fp as FilePath))
 }
 
-const filesToCopy = async (argv: Argv, cfg: QuartzConfig, excludeExtensions: Set<string>) => {
+const filesToCopy = async (ctx: BuildCtx, excludeExtensions: Set<string>) => {
+  const { argv, cfg } = ctx
   const excludePatterns = ["**/*.md", ...cfg.configuration.ignorePatterns]
   for (const ext of excludeExtensions) {
     excludePatterns.push(`**/*${ext}`)
   }
-  return await glob("**", argv.directory, excludePatterns)
+  return (await glob("**", argv.directory, excludePatterns)).filter(
+    (fp) => !isPublicationIgnored(ctx.publicationIgnore, fp),
+  )
 }
 
 const copyFile = async (argv: Argv, fp: FilePath) => {
@@ -127,7 +130,7 @@ export const Assets: QuartzEmitterPlugin = () => {
       const publishAssets = cfg.publishAssets ?? "all"
 
       const excludeExtensions = getPageTypeExtensions(ctx)
-      const allCandidates = await filesToCopy(ctx.argv, ctx.cfg, excludeExtensions)
+      const allCandidates = await filesToCopy(ctx, excludeExtensions)
 
       if (publishAssets === "referenced") {
         const referencedAssets = extractAssetReferences(content)
@@ -156,7 +159,7 @@ export const Assets: QuartzEmitterPlugin = () => {
 
       if (publishAssets === "referenced" && markdownChanged) {
         const referencedAssets = extractAssetReferences(content)
-        const allCandidates = await filesToCopy(ctx.argv, ctx.cfg, excludeExtensions)
+        const allCandidates = await filesToCopy(ctx, excludeExtensions)
         for (const fp of allCandidates) {
           const dest = joinSegments(ctx.argv.output, slugifyFilePath(fp)) as FilePath
           if (isReferenced(referencedAssets, fp)) {
@@ -172,6 +175,7 @@ export const Assets: QuartzEmitterPlugin = () => {
         publishAssets === "referenced" ? extractAssetReferences(content) : null
 
       for (const changeEvent of changeEvents) {
+        if (isPublicationIgnored(ctx.publicationIgnore, changeEvent.path)) continue
         const ext = path.extname(changeEvent.path)
         if (excludeExtensions.has(ext)) continue
 

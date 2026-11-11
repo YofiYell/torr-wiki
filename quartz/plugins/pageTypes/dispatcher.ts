@@ -26,6 +26,7 @@ import { attributeError, originOf } from "../../util/pluginErrors"
 import { rejectingFilter } from "../../processors/filter"
 import fs from "fs"
 import path from "path"
+import { isPublicationIgnored } from "../../util/publicationIgnore"
 
 function getPageTypes(ctx: BuildCtx): QuartzPageTypePluginInstance[] {
   return (ctx.cfg.plugins.pageTypes ?? []) as unknown as QuartzPageTypePluginInstance[]
@@ -162,6 +163,8 @@ export type VirtualEntry = {
    * `.base` or `.canvas` file): the page stands for a file and belongs in the folder hierarchy.
    */
   fileBacked: boolean
+  /** May be used in embeds, but must not emit a public page. */
+  excludedFromPublication?: boolean
 }
 
 /**
@@ -206,10 +209,12 @@ export async function generateVirtualPages(
         vfile.data.referencedBy = references.get(simplifySlug(vpSlug)) ?? []
         if (rejectingFilter(ctx, [tree, vfile]) !== undefined) continue
       }
-      if (vpSlug !== "404") {
+      const excludedFromPublication =
+        fileBacked && isPublicationIgnored(ctx.publicationIgnore, vfile.data.relativePath ?? "")
+      if (vpSlug !== "404" && !excludedFromPublication) {
         ctx.virtualPages.push([tree, vfile])
       }
-      virtualEntries.push({ tree, vfile, layout, vpSlug, fileBacked })
+      virtualEntries.push({ tree, vfile, layout, vpSlug, fileBacked, excludedFromPublication })
     }
   }
   return virtualEntries
@@ -248,7 +253,7 @@ export function folderTrie(
   virtualEntries: VirtualEntry[],
 ) {
   const fileBacked = virtualEntries
-    .filter((ve) => ve.fileBacked)
+    .filter((ve) => ve.fileBacked && !ve.excludedFromPublication)
     // the trie takes folder display names from file paths; a virtual page has only relativePath
     .map((ve) => ({
       ...ve.vfile.data,
@@ -431,6 +436,7 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
 
       // Phase 3: Emit virtual pages
       for (const ve of entriesToEmit) {
+        if (ve.excludedFromPublication) continue
         yield emitPage(
           ctx,
           ve.vpSlug,
@@ -520,6 +526,7 @@ export const PageTypeDispatcher: QuartzEmitterPlugin<Partial<DispatcherOptions>>
 
       // Phase 3: Emit virtual pages
       for (const ve of entriesToEmit) {
+        if (ve.excludedFromPublication) continue
         yield emitPage(
           ctx,
           ve.vpSlug,
