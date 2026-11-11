@@ -3,13 +3,24 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-10T22:54:57.553Z
-published: 2026-11-10T22:54:57.553Z
+modified: 2026-11-11T03:36:44.163Z
+published: 2026-11-11T03:36:44.163Z
 ---
 
 # World of Torr Wiki Home
 
+- **\_Build**
+  - **Views**
+  - [[Controls]]
+  - [[Styles]]
+  - [[Theme]]
 - **Campaign**
+  - **[[Heroes]]**
+    - [[Aerin]]
+    - [[Ash]]
+    - [[Gomwick]]
+    - [[Meeka]]
+    - [[Tilde]]
   - **Quests**
     - **Completed**
       - [[Get Milli to Safety]]
@@ -25,7 +36,8 @@ published: 2026-11-10T22:54:57.553Z
     - [[Session 5]]
     - [[Session 6]]
   - [[Almanac]]
-  - [[Campaign/Heroes]]
+  - [[Heroes.base|Heroes]]
+  - [[Party Connections.base|Party Connections]]
   - [[Party Connections]]
 - **Encyclopedia**
   - **Cultures**
@@ -67,14 +79,6 @@ published: 2026-11-10T22:54:57.553Z
   - [[Circle of Overgrowth]]
   - [[Homebrew.base|Homebrew]]
 - **People**
-  - **\_Heroes**
-    - **[[Campaign/Heroes/Heroes]]**
-      - [[Aerin]]
-      - [[Ash]]
-      - [[Gomwick]]
-      - [[Meeka]]
-      - [[Tilde]]
-    - [[Heroes.base|_Heroes]]
   - **z\_Minor**
     - [[Balthus Salazin]]
     - [[Edom Elster]]
@@ -86,7 +90,6 @@ published: 2026-11-10T22:54:57.553Z
     - [[Padmina of Belegorn]]
     - [[Sister Charity]]
     - [[Wala]]
-  - [[Party Connections.base|_Party Connections]]
   - [[Aloysius Gerhardt III]]
   - [[Barynthus Gerhardt]]
   - [[Calwen Wrencall]]
