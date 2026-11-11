@@ -1,0 +1,28 @@
+filters:
+  and:
+    - file.path.contains("Heroes/")
+    - file.name != "Heroes"
+formulas:
+  Age: 586-birth_year_GG
+  Species: if(!lineage.isEmpty(),lineage,species)
+properties:
+  file.name:
+    displayName: Name
+  note.surname:
+    displayName: Surname
+views:
+  - type: table
+    name: View
+    order:
+      - file.name
+      - surname
+      - formula.Age
+      - formula.Species
+      - class
+      - background
+      - alignment
+      - origin_location
+      - related_persons
+    columnSize:
+      file.name: 99
+      formula.Species: 117

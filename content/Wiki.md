@@ -3,12 +3,21 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-11T05:14:27.320Z
-published: 2026-11-11T05:14:27.320Z
+modified: 2026-11-11T10:44:21.176Z
+published: 2026-11-11T10:44:21.176Z
 ---
 
 # World of Torr Wiki Home
 
+- **\_Build**
+  - **Views**
+    - [[Heroes.base|Heroes]]
+    - [[Party Connections.base|Party Connections]]
+  - [[.ignore]]
+  - [[Controls]]
+  - [[Nested Unhide Restore]]
+  - [[Styles]]
+  - [[Theme]]
 - **Campaign**
   - **[[Heroes]]**
     - [[Aerin]]
@@ -31,8 +40,6 @@ published: 2026-11-11T05:14:27.320Z
     - [[Session 5]]
     - [[Session 6]]
   - [[Almanac]]
-  - [[Heroes.base|Heroes]]
-  - [[Party Connections.base|Party Connections]]
   - [[Party Connections]]
 - **Encyclopedia**
   - **Cultures**
@@ -102,9 +109,8 @@ published: 2026-11-11T05:14:27.320Z
       - [[Founder's Square]]
       - [[Garth's]]
       - [[Jaja Goethe’s Honeyhaus]]
-      - [[Labyrinth at New Calaban]]
+      - [[Labyrinth of Greed]]
       - [[Pearl Lounge]]
-      - [[Rowena's Cottage]]
       - [[Rowena’s Cottage]]
       - [[Schönhaven]]
   - **[[Elivandra - Island]]**
