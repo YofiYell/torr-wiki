@@ -1,8 +1,8 @@
 ---
 publish: true
 created: 2026-11-10T01:15:32.443Z
-modified: 2026-11-11T05:09:16.011Z
-published: 2026-11-11T05:09:16.011Z
+modified: 2026-11-11T21:19:06.563Z
+published: 2026-11-11T21:19:06.563Z
 unlisted: true
 quartz_asset: css
 ---
@@ -96,7 +96,7 @@ quartz_asset: css
 
 /* Statblock */
 #quartz-body .callout[data-callout="stat"] {
-    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/file-digit.svg");
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/file-table-properties.svg");
 }
 
 /* Rule */

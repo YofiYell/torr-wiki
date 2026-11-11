@@ -82,7 +82,7 @@
 
 /* Statblock */
 #quartz-body .callout[data-callout="stat"] {
-    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/file-digit.svg");
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/file-table-properties.svg");
 }
 
 /* Rule */

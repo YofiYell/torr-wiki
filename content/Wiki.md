@@ -3,8 +3,8 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-11T17:28:39.331Z
-published: 2026-11-11T17:28:39.331Z
+modified: 2026-11-11T20:47:56.829Z
+published: 2026-11-11T20:47:56.829Z
 ---
 
 # World of Torr Wiki Home
@@ -14,7 +14,7 @@ published: 2026-11-11T17:28:39.331Z
     - [[custom-callouts]]
     - [[dataviews]]
     - [[quartz-ITS-quote-callout]]
-  - [[.ignore]]
+  - [[Bestiary]]
   - [[Styles]]
   - [[Theme]]
 - **\_Views**
