@@ -3,17 +3,12 @@ publish: true
 permalink: index
 title: Welcome to Torr
 created: 2026-11-09T01:53:14.000Z
-modified: 2026-11-11T03:36:44.163Z
-published: 2026-11-11T03:36:44.163Z
+modified: 2026-11-11T05:14:27.320Z
+published: 2026-11-11T05:14:27.320Z
 ---
 
 # World of Torr Wiki Home
 
-- **\_Build**
-  - **Views**
-  - [[Controls]]
-  - [[Styles]]
-  - [[Theme]]
 - **Campaign**
   - **[[Heroes]]**
     - [[Aerin]]

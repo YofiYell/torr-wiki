@@ -1,6 +1,6 @@
 # Best Friends Fight Team
 
-||[[Aerin\|Aerin]]|[[Ash\|Ash]]|[[Gomwick\|Gomwick]]|[[Meeka\|Meeka]]|[[Tilde\|Tilde]]|
+|Test|[[Aerin\|Aerin]]|[[Ash\|Ash]]|[[Gomwick\|Gomwick]]|[[Meeka\|Meeka]]|[[Tilde\|Tilde]]|
 |---|---|---|---|---|---|
 |**Surname**|||Galanodel|Brandis||
 |**Age**|121|31|22|21|19|
