@@ -1,0 +1,98 @@
+```css
+
+/* =========================================
+   CUSTOM CALLOUTS — OBSIDIAN + QUARTZ
+   ========================================= */
+
+/* TREASURE */
+
+.callout[data-callout="treasure"] {
+    --callout-color: #dd9e00;
+    --callout-icon: lucide-hand-coins;
+}
+
+/* CHARACTER SHEET */
+
+.callout[data-callout="char"] {
+    --callout-color: #11ad74;
+    --callout-icon: lucide-file-user;
+}
+
+/* STATBLOCK */
+
+.callout[data-callout="stat"] {
+    --callout-color: #0077bb;
+    --callout-icon: lucide-table-properties;
+}
+
+/* RULE */
+
+.callout[data-callout="rule"] {
+    --callout-color: #00992b;
+    --callout-icon: lucide-scale;
+}
+
+/* REMINDER */
+
+.callout[data-callout="reminder"] {
+    --callout-color: #e88f00;
+    --callout-icon: lucide-bell;
+}
+
+
+/* =========================================
+   QUARTZ COMPATIBILITY
+   ========================================= */
+
+/* Translate Obsidian accent colors to Quartz */
+
+#quartz-body .callout:is(
+    [data-callout="treasure"],
+    [data-callout="char"],
+    [data-callout="stat"],
+    [data-callout="rule"],
+    [data-callout="reminder"]
+) {
+    --color: var(--callout-color);
+    --border: color-mix(in srgb, var(--callout-color) 27%, transparent);
+
+    background-color: color-mix(
+        in oklch,
+        var(--callout-color) 10%,
+        transparent
+    );
+}
+
+/* Quartz: Treasure — Lucide Hand Coins */
+
+
+/* =========================================
+   QUARTZ — LUCIDE ICONS
+   ========================================= */
+
+/* Treasure */
+#quartz-body .callout[data-callout="treasure"] {
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/hand-coins.svg");
+}
+
+/* Character Sheet */
+#quartz-body .callout[data-callout="char"] {
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/file-user.svg");
+}
+
+/* Statblock */
+#quartz-body .callout[data-callout="stat"] {
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/file-digit.svg");
+}
+
+/* Rule */
+#quartz-body .callout[data-callout="rule"] {
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/scale.svg");
+}
+
+/* Reminder */
+#quartz-body .callout[data-callout="reminder"] {
+    --callout-icon: url("https://cdn.jsdelivr.net/npm/lucide-static@1.70.0/icons/bell.svg");
+}
+
+```
