@@ -2,3 +2,204 @@
 @use "./generated-custom-styles";
 
 // put your custom CSS here!
+
+
+/*
+ * Basic 5e statblocks, structurally adapted from Fantasy Statblocks.
+ * Colors, fonts, and surfaces inherit Quartz/ITS variables; no parchment
+ * colors or WotC background assets are loaded.
+ */
+.qz-statblock {
+  --qz-statblock-accent: var(--tertiary);
+  --qz-statblock-heading: var(--tertiary);
+  --qz-statblock-text: var(--darkgray);
+  --qz-statblock-rule: var(--tertiary);
+
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: 0.55rem 0.3rem;
+  background: transparent;
+  color: var(--qz-statblock-text);
+  font-family: var(--bodyFont);
+  font-size: 0.95rem;
+  line-height: 1.45;
+
+  &,
+  * {
+    box-sizing: border-box;
+  }
+
+  .qz-statblock-heading {
+    margin: 0;
+  }
+
+  .qz-statblock-name {
+    font-family: var(--headerFont);
+    color: var(--qz-statblock-heading);
+    font-size: clamp(1.4rem, 4vw, 1.95rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+    letter-spacing: 0.015em;
+  }
+
+  .qz-statblock-type {
+    font-style: italic;
+    color: var(--qz-statblock-text);
+    margin: 0.35rem 0 0.4rem;
+  }
+
+  /* Fantasy Statblocks' beveled, tapered bars without fixed color values. */
+  .qz-statblock-rule {
+    height: 0.38rem;
+    margin: 0.45rem 0 0.55rem;
+    background: linear-gradient(
+      90deg,
+      var(--qz-statblock-rule) 0%,
+      var(--qz-statblock-rule) 76%,
+      transparent 100%
+    );
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+  }
+
+  .qz-statblock-rule-section {
+    height: 0.2rem;
+    margin: 0.15rem 0 0.5rem;
+  }
+
+  .qz-statblock-property {
+    margin: 0;
+    padding: 0.3rem 0.35rem;
+    color: var(--qz-statblock-text);
+    line-height: 1.4;
+
+    &:nth-of-type(odd) {
+      background: var(--highlight);
+    }
+  }
+
+  .qz-statblock-property-name {
+    color: var(--qz-statblock-accent);
+    font-weight: 700;
+  }
+
+  .qz-statblock-abilities {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.25rem;
+    padding: 0.55rem 0;
+    text-align: center;
+  }
+
+  .qz-statblock-ability {
+    display: flex;
+    flex-direction: column;
+    gap: 0.08rem;
+    min-width: 0;
+    font-size: 0.88rem;
+  }
+
+  .qz-statblock-ability-name {
+    font-weight: 700;
+  }
+
+  .qz-statblock-ability-score {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .qz-statblock-challenge {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.8rem;
+
+    > .qz-statblock-property {
+      background: transparent;
+    }
+  }
+
+  .qz-statblock-section {
+    margin-top: 0.8rem;
+  }
+
+  .qz-statblock-section-title {
+    font-family: var(--headerFont);
+    color: var(--qz-statblock-heading);
+    font-weight: 700;
+    font-size: 1.38rem;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
+  }
+
+  .qz-statblock-entry {
+    margin: 0.4rem 0;
+    padding: 0.1rem 0.35rem;
+    color: var(--qz-statblock-text);
+
+    > p {
+      margin: 0 0 0.4rem;
+      color: inherit;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(even) {
+      background: var(--highlight);
+    }
+
+    .qz-statblock-entry-name {
+      font-style: italic;
+      color: var(--qz-statblock-accent);
+    }
+
+    a {
+      color: var(--secondary);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .qz-statblock-abilities {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      row-gap: 0.55rem;
+    }
+
+    .qz-statblock-challenge {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}
+
+
+/* Content errors stay visible in place; they never abort publication. */
+.qz-statblock-error {
+  margin: 0.9rem 0;
+  border-left: 0.35rem solid var(--secondary);
+  background: var(--highlight);
+  color: var(--darkgray);
+  padding: 0.75rem 1rem;
+  font-family: var(--bodyFont);
+
+  .qz-statblock-error-title {
+    display: block;
+    font-family: var(--headerFont);
+    color: var(--secondary);
+    margin-bottom: 0.2rem;
+  }
+
+  .qz-statblock-error-message {
+    margin: 0 0 0.35rem;
+    overflow-wrap: anywhere;
+    color: inherit;
+  }
+
+  .qz-statblock-error-source {
+    opacity: 0.75;
+  }
+}

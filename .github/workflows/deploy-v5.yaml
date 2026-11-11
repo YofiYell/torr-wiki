@@ -66,6 +66,9 @@ jobs:
       - name: Test publication exclusions
         run: npx tsx --test quartz/util/publicationIgnore.test.ts quartz/plugins/pageTypes/dispatcher.test.ts
 
+      - name: Test Basic 5e statblock rendering
+        run: npx tsx --test quartz/plugins/transformers/statblocks.test.ts
+
       - name: Build Wiki
         run: npx quartz build -d content -v
 

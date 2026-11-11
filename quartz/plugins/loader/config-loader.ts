@@ -42,6 +42,7 @@ import {
   CapabilityPlugin,
 } from "./capabilities"
 import { absorbingBuiltin, BuiltinPlan, instantiateBuiltins, planBuiltins } from "../builtins"
+import { Statblocks } from "../transformers/statblocks"
 import { registerPluginOrigin, reportError, warn } from "../../util/diagnostics"
 import { firstPluginFrame } from "../../util/trace"
 import {
@@ -704,10 +705,16 @@ export async function loadQuartzConfig(
       .map((item) => item.instance as T)
 
   const plugins: PluginTypes = {
-    transformers: withBuiltins(
-      instantiateBuiltins(builtinPlan, "transformer"),
-      await instantiate(transformers, "transformer"),
-    ),
+    transformers: [
+      // Statblock code fences must be intercepted BEFORE rehype-pretty-code,
+      // which replaces ordinary <pre><code> nodes with highlighted figures.
+      // OFM's Markdown callout transform has already run before HTML parsing.
+      Statblocks(),
+      ...withBuiltins(
+        instantiateBuiltins(builtinPlan, "transformer"),
+        await instantiate(transformers, "transformer"),
+      ),
+    ],
     filters: withBuiltins(
       instantiateBuiltins(builtinPlan, "filter"),
       await instantiate(filters, "filter"),
