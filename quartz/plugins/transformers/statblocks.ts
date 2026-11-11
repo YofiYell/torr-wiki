@@ -179,9 +179,9 @@ function section(heading: string, entries: unknown): Element[] {
   if (items.length === 0) return []
   return [
     element("section", cls("qz-statblock-section"), [
-      element("h4", cls("qz-statblock-section-title"), [txt(heading)]),
+      element("div", { ...cls("qz-statblock-section-title"), role: "heading", "aria-level": 4 }, [txt(heading)]),
       line("section"),
-      ...items.map(trait),
+      element("div", cls("qz-statblock-entry-list"), items.map(trait)),
     ]),
   ]
 }
@@ -296,17 +296,18 @@ export function renderStatblock(creature: Creature): Element {
     "aria-label": name + " statblock",
   }, [
     element("header", cls("qz-statblock-heading"), [
-      element("h3", cls("qz-statblock-name"), [txt(name)]),
+      element("div", { ...cls("qz-statblock-name"), role: "heading", "aria-level": 3 }, [txt(name)]),
       ...(category ? [element("p", cls("qz-statblock-type"), [txt(category)])] : []),
     ]),
     line(),
-    ...primary,
-    ...(primary.length ? [line()] : []),
+    ...(primary.length ? [element("div", cls("qz-statblock-properties"), primary), line()] : []),
     ...(stats ? [stats, line()] : []),
-    ...details,
+    ...(details.length ? [element("div", cls("qz-statblock-details"), details)] : []),
     ...challengeRow,
     ...(details.length || challengeRow.length ? [line()] : []),
-    ...(Array.isArray(creature.traits) ? creature.traits.map(trait) : []),
+    ...(Array.isArray(creature.traits) && creature.traits.length
+      ? [element("div", cls("qz-statblock-entry-list"), creature.traits.map(trait))]
+      : []),
     ...spells,
     ...section("Actions", creature.actions),
     ...section("Bonus Actions", creature.bonus_actions),

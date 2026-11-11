@@ -90,8 +90,29 @@ describe("Basic 5e statblock renderer", () => {
     assert.match(html, /River Runner/)
     assert.match(html, /<em>Melee Attack:<\/em>/)
     assert.match(html, /<strong>swift<\/strong>/)
-    assert.match(html, /<h4[^>]*>Actions<\/h4>/)
+    assert.match(html, /role="heading" aria-level="3">Sample Beast<\/div>/)
+    assert.match(html, /role="heading" aria-level="4">Actions<\/div>/)
+    assert.match(html, /qz-statblock-properties/)
+    assert.match(html, /qz-statblock-details/)
+    assert.match(html, /qz-statblock-entry-list/)
+    assert.doesNotMatch(html, /<h[34][\s>]/, "avoid global heading decorations")
     assert.doesNotMatch(html, /fdf1dc|parchment|WotC/i)
+  })
+
+  test("component stylesheet follows ITS statblock variables with Quartz fallbacks", () => {
+    const stylesheet = fs.readFileSync(path.join(process.cwd(), "quartz/styles/custom.scss"), "utf8")
+    for (const property of [
+      "--statblock-background-color",
+      "--statblock-heading-font",
+      "--statblock-heading-font-color",
+      "--statblock-rule-color",
+      "--statblock-bar-color",
+      "--statblock-alt",
+      "--statblock-content-font",
+      "--statblock-section-heading-font-color",
+    ]) assert.ok(stylesheet.includes(property), "missing theme variable " + property)
+    assert.match(stylesheet, /max-width: 38rem/)
+    assert.doesNotMatch(stylesheet, /#fdf1dc|parchment-paper|url\([^)]*parchment/i)
   })
 
   test("handles unrecognized creatures locally, without losing valid siblings", () => {

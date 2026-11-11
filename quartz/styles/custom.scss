@@ -5,99 +5,145 @@
 
 
 /*
- * Basic 5e statblocks, structurally adapted from Fantasy Statblocks.
- * Colors, fonts, and surfaces inherit Quartz/ITS variables; no parchment
- * colors or WotC background assets are loaded.
+ * Basic 5e statblocks: structure adapted from Fantasy Statblocks.
+ * Use ITS's actual Fantasy Statblocks properties when present (including
+ * Style Settings overrides); fall back to Quartz variables on other themes.
+ * Deliberately no parchment textures, fixed palettes, or article-heading CSS.
  */
 .qz-statblock {
-  --qz-statblock-accent: var(--tertiary);
-  --qz-statblock-heading: var(--tertiary);
-  --qz-statblock-text: var(--darkgray);
-  --qz-statblock-rule: var(--tertiary);
+  --qz-sb-surface: var(--statblock-background-color, var(--light));
+  --qz-sb-text: var(--statblock-font-color, var(--darkgray));
+  --qz-sb-heading: var(--statblock-heading-font-color, var(--tertiary));
+  --qz-sb-property-heading: var(--statblock-property-name-font-color, var(--secondary));
+  --qz-sb-bar: var(--statblock-bar-color, var(--tertiary));
+  --qz-sb-rule: var(--statblock-rule-color, var(--tertiary));
+  --qz-sb-section-rule: var(--statblock-section-heading-border-color, var(--gray));
+  --qz-sb-section-heading: var(--statblock-section-heading-font-color, var(--gray));
+  --qz-sb-alt: var(--statblock-alt, var(--highlight));
 
   box-sizing: border-box;
-  max-width: 100%;
-  margin: 1rem 0;
-  padding: 0.55rem 0.3rem;
-  background: transparent;
-  color: var(--qz-statblock-text);
-  font-family: var(--bodyFont);
-  font-size: 0.95rem;
+  display: block;
+  width: 100%;
+  max-width: 38rem;
+  min-width: 0;
+  margin: 1rem auto;
+  padding: 0.75rem 0.8rem 1rem;
+  background-color: var(--qz-sb-surface);
+  border: var(--statblock-border-size, 0) solid
+    var(--statblock-border-color, transparent);
+  box-shadow:
+    var(--statblock-box-shadow-x-offset, 0)
+    var(--statblock-box-shadow-y-offset, 0)
+    var(--statblock-box-shadow-blur, 0)
+    var(--statblock-box-shadow-color, transparent);
+  color: var(--qz-sb-text);
+  font-family: var(--statblock-content-font, var(--bodyFont));
+  font-size: var(--statblock-content-font-size, 1rem);
   line-height: 1.45;
 
-  &,
-  * {
+  &, * {
     box-sizing: border-box;
+  }
+
+  /* Fantasy Statblocks' straight top/bottom bars; no fixed colors. */
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 0.36rem;
+    background-color: var(--qz-sb-bar);
+    border: var(--statblock-bar-border-size, 0) solid
+      var(--statblock-bar-border-color, var(--qz-sb-bar));
+  }
+
+  &::before {
+    margin: -0.75rem -0.8rem 0.75rem;
+  }
+
+  &::after {
+    margin: 0.75rem -0.8rem -1rem;
   }
 
   .qz-statblock-heading {
     margin: 0;
   }
 
+  /* Divs with heading roles avoid ITS/Quartz article h3/h4 decoration. */
   .qz-statblock-name {
-    font-family: var(--headerFont);
-    color: var(--qz-statblock-heading);
-    font-size: clamp(1.4rem, 4vw, 1.95rem);
-    font-weight: 700;
-    line-height: 1.25;
+    font-family: var(--statblock-heading-font, var(--headerFont));
+    font-variant: var(--statblock-heading-font-variant, normal);
+    font-weight: var(--statblock-heading-font-weight, 700);
+    font-size: var(--statblock-heading-font-size, 1.85rem);
+    line-height: var(--statblock-heading-line-height, 1.2);
+    color: var(--qz-sb-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.012em;
+    overflow-wrap: anywhere;
     margin: 0;
-    letter-spacing: 0.015em;
   }
 
   .qz-statblock-type {
-    font-style: italic;
-    color: var(--qz-statblock-text);
-    margin: 0.35rem 0 0.4rem;
+    color: var(--qz-sb-text);
+    font-size: var(--statblock-subheading-font-size, 0.93rem);
+    font-style: var(--statblock-subheading-font-style, italic);
+    font-weight: var(--statblock-subheading-font-weight, 400);
+    margin: 0.6rem 0 0.3rem;
   }
 
-  /* Fantasy Statblocks' beveled, tapered bars without fixed color values. */
-  .qz-statblock-rule {
-    height: 0.38rem;
-    margin: 0.45rem 0 0.55rem;
+  /* Tapered green divider shape from the original statblock layout. */
+  .qz-statblock-rule-major {
+    height: 0.34rem;
+    margin: 0.55rem 0 0.65rem;
     background: linear-gradient(
       90deg,
-      var(--qz-statblock-rule) 0%,
-      var(--qz-statblock-rule) 76%,
+      var(--qz-sb-rule) 0%,
+      var(--qz-sb-rule) 76%,
       transparent 100%
     );
     clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
   }
 
   .qz-statblock-rule-section {
-    height: 0.2rem;
+    height: var(--statblock-section-heading-border-size, 0.22rem);
     margin: 0.15rem 0 0.5rem;
+    background-color: var(--qz-sb-section-rule);
   }
 
   .qz-statblock-property {
     margin: 0;
-    padding: 0.3rem 0.35rem;
-    color: var(--qz-statblock-text);
-    line-height: 1.4;
-
-    &:nth-of-type(odd) {
-      background: var(--highlight);
-    }
+    padding: var(--statblock-alt-padding, 0.25em 0.3em);
+    color: var(--statblock-property-font-color, var(--qz-sb-text));
+    line-height: var(--statblock-property-line-height, 1.4);
   }
 
   .qz-statblock-property-name {
-    color: var(--qz-statblock-accent);
+    color: var(--qz-sb-property-heading);
     font-weight: 700;
+  }
+
+  /* Each logical list stripes independently, regardless of preceding divs. */
+  .qz-statblock-properties > .qz-statblock-property:nth-child(odd),
+  .qz-statblock-details > .qz-statblock-property:nth-child(odd),
+  .qz-statblock-entry-list > .qz-statblock-entry:nth-child(even),
+  .qz-statblock-section .qz-statblock-entry-list > .qz-statblock-entry:nth-child(odd) {
+    background-color: var(--qz-sb-alt);
   }
 
   .qz-statblock-abilities {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 0.25rem;
-    padding: 0.55rem 0;
+    gap: 0.2rem;
+    padding: 0.5rem 0;
     text-align: center;
   }
 
   .qz-statblock-ability {
     display: flex;
     flex-direction: column;
-    gap: 0.08rem;
+    gap: 0.1rem;
     min-width: 0;
-    font-size: 0.88rem;
+    color: var(--qz-sb-text);
+    font-size: 0.91em;
   }
 
   .qz-statblock-ability-name {
@@ -115,33 +161,36 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0.3rem 0.8rem;
+    margin-top: 0.25rem;
 
     > .qz-statblock-property {
-      background: transparent;
+      background-color: transparent;
     }
   }
 
   .qz-statblock-section {
-    margin-top: 0.8rem;
+    margin-top: 0.75rem;
   }
 
   .qz-statblock-section-title {
-    font-family: var(--headerFont);
-    color: var(--qz-statblock-heading);
-    font-weight: 700;
-    font-size: 1.38rem;
+    font-family: var(--statblock-section-heading-font, var(--headerFont));
+    font-size: var(--statblock-section-heading-font-size, 1.35rem);
+    font-variant: var(--statblock-section-heading-font-variant, normal);
+    font-weight: var(--statblock-section-heading-font-weight, 400);
     line-height: 1.25;
+    color: var(--qz-sb-section-heading);
+    text-transform: uppercase;
     margin: 0;
     padding: 0;
   }
 
   .qz-statblock-entry {
-    margin: 0.4rem 0;
-    padding: 0.1rem 0.35rem;
-    color: var(--qz-statblock-text);
+    margin: 0.28rem 0;
+    padding: var(--statblock-alt-padding, 0.25em 0.3em);
+    color: var(--qz-sb-text);
 
     > p {
-      margin: 0 0 0.4rem;
+      margin: 0 0 0.25rem;
       color: inherit;
     }
 
@@ -149,13 +198,10 @@
       margin-bottom: 0;
     }
 
-    &:nth-of-type(even) {
-      background: var(--highlight);
-    }
-
     .qz-statblock-entry-name {
+      font-weight: 700;
       font-style: italic;
-      color: var(--qz-statblock-accent);
+      color: var(--qz-sb-property-heading);
     }
 
     a {
@@ -166,7 +212,7 @@
   @media (max-width: 560px) {
     .qz-statblock-abilities {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      row-gap: 0.55rem;
+      row-gap: 0.6rem;
     }
 
     .qz-statblock-challenge {
@@ -175,7 +221,6 @@
     }
   }
 }
-
 
 /* Content errors stay visible in place; they never abort publication. */
 .qz-statblock-error {
