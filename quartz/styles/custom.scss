@@ -73,7 +73,7 @@
     font-family: var(--statblock-heading-font, var(--headerFont));
     font-variant: var(--statblock-heading-font-variant, normal);
     font-weight: var(--statblock-heading-font-weight, 700);
-    font-size: var(--statblock-heading-font-size, 1.85rem);
+    font-size: 1.85rem; // renderer-specific; ITS has no heading-size token
     line-height: var(--statblock-heading-line-height, 1.2);
     color: var(--qz-sb-heading);
     text-transform: uppercase;
@@ -113,7 +113,7 @@
     margin: 0;
     padding: var(--statblock-alt-padding, 0.25em 0.3em);
     color: var(--statblock-property-font-color, var(--qz-sb-text));
-    line-height: var(--statblock-property-line-height, 1.4);
+    line-height: 1.4; // renderer-specific; ITS has no property line-height token
   }
 
   .qz-statblock-property-name {
@@ -205,7 +205,7 @@
     }
 
     a {
-      color: var(--secondary);
+      color: var(--link-color, var(--secondary));
     }
   }
 
@@ -277,12 +277,12 @@
 
     // ITS uses a translucent --td tint on both axes. Distinct row and
     // column strengths produce four intersections instead of flat stripes.
-    --qz-table-surface: var(--table-row-background, var(--note, var(--light)));
+    --qz-table-surface: var(--note, var(--light)); // ITS table-background is transparent
     --qz-table-column-shade: var(--table-column-alt-background, var(--td, var(--highlight)));
     --qz-table-row-shade: var(--table-row-alt-background, var(--td, var(--highlight)));
     --qz-table-header-surface: var(
       --qz-table-header-bg,
-      var(--embed-bg, var(--table-header-background, var(--th, var(--light))))
+      var(--table-header-background, var(--th, var(--light)))
     );
     background-color: var(--qz-table-surface);
 
@@ -294,19 +294,19 @@
     th,
     td {
       min-width: 0;
-      vertical-align: top;
-      border: 1px solid var(--table-border-color, var(--table, var(--lightgray)));
+      vertical-align: var(--table-cell-vertical-alignment, top);
+      border: var(--table-border-width, 1px) solid var(--table-border-color, var(--table, var(--lightgray)));
       overflow-wrap: normal;
       word-break: normal;
     }
 
     > thead > tr > th {
-      // The ITS Dataview-like header uses the dark embed surface; theme
-      // and Style Settings can override it with --qz-table-header-bg.
+      // Alternate between ITS's accent-tinted table header and dark embed surface.
+      // --qz-table-header-bg remains an optional local base-header override.
       background-color: var(--qz-table-header-surface);
       color: var(--table-header-text-color, var(--headers, var(--secondary)));
       font-family: var(--font, var(--headerFont));
-      font-size: var(--table-header-size, 1rem);
+      font-size: var(--font-text-size, 1rem); // ITS table-header-size resolves to a font family
       font-weight: normal; // only ** in Markdown provides bold
       line-height: 1.25;
       white-space: nowrap;
@@ -322,11 +322,7 @@
     }
 
     > thead > tr > th:nth-child(even) {
-      background-color: color-mix(
-        in srgb,
-        var(--qz-table-header-surface) 82%,
-        var(--note, var(--light)) 18%
-      );
+      background-color: var(--embed-bg, var(--note, var(--light)));
     }
 
     > thead > tr > th:first-child:empty {
@@ -352,7 +348,7 @@
       background-color: transparent;
       color: var(--text-normal, var(--darkgray));
       font-size: var(--table-text-size, 0.94rem);
-      line-height: 1.3;
+      line-height: var(--table-line-height, 1.3);
     }
 
     > tbody > tr > td:nth-child(odd) {
@@ -405,7 +401,7 @@
 
     > tbody > tr > td ul.qz-table-diamond-list > li:nth-child(even)::before {
       background-color: var(
-        --list-marker-color-alt,
+        --list-marker-color-other,
         var(--accent2, var(--secondary))
       );
     }
