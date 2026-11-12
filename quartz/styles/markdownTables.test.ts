@@ -56,7 +56,7 @@ describe("ITS Markdown table parity", () => {
     assert.match(tableCss, /--list-bullet-size/)
     assert.match(tableCss, /--list-bullet-transform/)
     assert.match(tableCss, /--list-marker-color/)
-    assert.match(tableCss, /--list-marker-color-alt/)
+    assert.match(tableCss, /--list-marker-color-other/)
     assert.match(tableCss, /li:nth-child\(even\)::before/)
   })
 
