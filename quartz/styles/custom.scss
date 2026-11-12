@@ -306,7 +306,7 @@
       background-color: var(--qz-table-header-surface);
       color: var(--table-header-text-color, var(--headers, var(--secondary)));
       font-family: var(--font, var(--headerFont));
-      font-size: var(--font-text-size, 1rem); // ITS table-header-size resolves to a font family
+      font-size: var(--table-text-size, 1rem); // ITS table-header-size resolves to a font family
       font-weight: normal; // only ** in Markdown provides bold
       line-height: 1.25;
       white-space: nowrap;
